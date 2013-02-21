@@ -1,0 +1,228 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>Roslyn Compiler as a Service</title>
+
+		<meta name="description" content="A framework for easily creating beautiful presentations using HTML">
+		<meta name="author" content="Hakim El Hattab">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<link rel="stylesheet" href="css/reveal.min.css">
+		<link rel="stylesheet" href="css/theme/default.css" id="theme">
+
+		<!-- For syntax highlighting -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- If the query includes 'print-pdf', use the PDF print sheet -->
+		<script>
+			document.write( '<link rel="stylesheet" href="css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+
+
+		<style type="text/css">
+			code.custom{
+				font-size: 20pt;
+				font-weight: bold;
+			}
+			span.team {
+				font-size: 1.2em;
+				color: #97CF00;
+			}
+		</style>
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+
+				<section>
+					<img src="images/welcome-to-roslyn.jpg" />
+					<p>
+						<small>revealed by <a href="http://hakim.se">Eugene Zharkov</a> / <a href="http://twitter.com/2j2e">@2j2e</a></small>
+					</p>
+				</section>
+
+				<section>
+					<h2>Compiler is a black box</h2>
+					<img src="images/compiler-is-a-black-box.jpg" />
+				</section>
+
+				<section>
+					<h2>Roslyn Team</h2>
+					<p><span class="team">Anders Hejlsberg</span> - father of Microsoft's C# language.</p>
+					<p><span class="team">Matt Warren</span> - software achitect at Microsoft on the C# programming language product team.</p>
+					<p><span class="team">Pete Golde</span> - lead developer of the original Microsoft C# compiler.</p>
+					<p><span class="team">Karen Ng</span> - lead program manager on the Visual Studio Professional team.</p>
+				</section>
+
+				<section>
+					<h2>Features</h2>
+					<ul>
+						<li>Managed compilers (C# / VB)</li>
+						<li class="fragment roll-in">Code analysis APIs</li>
+						<li class="fragment roll-in">Language service extensibility</li>
+						<li class="fragment roll-in">Read-Eval-Print-Loop (REPL)</li>
+					</ul>
+				</section>
+
+				<section>
+					<section>
+						<h2>Compiler Pipeline</h2>
+						<img src="images/compiler-pipeline.png" />
+					</section>
+
+					<section>
+						<h2>Compiler API</h2>
+						<img src="images/compiler-api.png" />
+					</section>
+
+					<section>
+						<h2>Language Service</h2>
+						<img src="images/language-service.png"/>
+					</section>
+
+				</section>
+
+				<section>
+					<h2>Syntax Trees</h2>
+					<ul>
+						<li>Immutable</li>
+						<li>Resilient</li>
+						<li>Efficient</li>
+						<li>Complete & Consistent</li>
+					</ul>
+				</section>
+
+				<section>
+					<h2>Syntax Tree Code Example</h2>
+					<pre><code class="custom">class C
+{
+	void M()
+	{
+	}
+	// C
+}</code></pre>
+				</section>
+
+				<section>
+					<section>
+						<h2>Syntax Tree - Nodes</h2>
+						<img src="images/syntax-tree-nodes.png" style="width: 800px" />
+					</section>
+					<section>
+						<h2>Syntax Tree Code Example</h2>
+						<pre><code class="custom">class C
+{
+	void M()
+	{
+	}
+	// C
+}</code></pre>
+					</section>
+				</section>
+
+				<section>
+					<section>
+						<h2>Syntax Tree - Tokens</h2>
+						<img src="images/syntax-tree-tokens.png" />
+					</section>
+					<section>
+						<h2>Syntax Tree Code Example</h2>
+						<pre><code class="custom">class C
+{
+	void M()
+	{
+	}
+	// C
+}</code></pre>
+					</section>
+				</section>
+
+				<section>
+					<section>
+						<h2>Syntax Tree - "Trivia"</h2>
+						<img src="images/syntax-tree-trivia.png" />
+					</section>
+
+					<section>
+						<h2>Syntax Tree Code Example</h2>
+						<pre><code class="custom">class C
+{
+	void M()
+	{
+	}
+	// C
+}</code></pre>
+					</section>
+				</section>
+
+				<section>
+					<h2>Syntax Visualizer</h2>
+					<img src="images/syntax-visualizer.png" />
+				</section>
+
+				<section>
+					<h2>Workspace</h2>
+					<img src="images/workspace.png" />
+				</section>
+
+				<section>
+					<h2>For Review</h2>
+					<a href="http://msdn.microsoft.com/en-us/vstudio/roslyn.aspx">Roslyn documentation</a>
+					<a href="http://research.microsoft.com/apps/video/default.aspx?id=152281">Refactoring with Roslyn Circus Comes to Town</a>
+					<a href="http://channel9.msdn.com/Events/BUILD/BUILD2011/TOOL-816T">BUILD: Anders – Future of C# and Visual Basic</a>
+					<a href="http://channel9.msdn.com/Blogs/Charles/The-Roslyn-Project-Meet-the-Design-Team">Meet the Design Team</a>
+				</section>
+
+			</div>
+
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.min.js"></script>
+
+		<script>
+
+			// Full list of configuration options available here:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+				width: 960,
+				height: 700,
+
+				theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+				transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
+
+				// Optional libraries used to extend on reveal.js
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/showdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+					{ src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+					// { src: 'plugin/remotes/remotes.js', async: true, condition: function() { return !!document.body.classList; } }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>
