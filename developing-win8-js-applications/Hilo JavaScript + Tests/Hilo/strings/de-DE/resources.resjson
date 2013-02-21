@@ -1,0 +1,60 @@
+﻿// For details on localizing a Windows app, see: http://go.microsoft.com/fwlink/?LinkId=212836
+
+{
+    "AcceptAppBarButton.Name":    "annehmen",
+    "_AcceptAppBarButton.Name.comment":    "App bar button text.",
+
+    "AppBar.FlowDirection":    "LeftToRight",
+    "_AppBar.FlowDirection.comment":    "FlowDirection for every app bar.",
+
+    "AppName.Text":    "Hilo JavaScript",
+    "_AppName.Text.comment":    "Page title on hub page.",
+
+    "CancelAppBarButton.Name":    "Storniere",
+    "_CancelAppBarButton.Name.comment":    "App bar button text.",
+
+    "CropAppBarButton.Name":    "Vergrӧβerung",
+    "_CropAppBarButton.Name.comment":    "App bar button text.",
+
+    "CropImagePageTitle.Text":    "Vergrӧβerung",
+    "_CropImagePageTitle.Text.comment":    "Page title for snap view.",
+
+    "Description":    "Foto Applikation basierent auf JavaScript und HTML",
+    "_Description.comment":    "Description field for the package manifest.",
+
+    "DisplayName":    "Hilo JavaScript",
+    "_DisplayName.comment":    "DisplayName property value for the Visual Element in the package manifest.",
+
+    "DisplayNameProperty":    "Hilo JavaScript",
+    "_DisplayNameProperty.comment":    "DisplayName property value for the package manifest.",
+
+    "EmptyPicturesTitle":    "Die Bildbibliothek ist leer",
+    "_EmptyPicturesTitle.comment":    "Displayed on hub page when there are no photos in the users pictures library.",
+
+    "ErrorFailedToCreateInitialPage":    "Fehler beim Erstellen der Startseite",
+    "_ErrorFailedToCreateInitialPage.comment":    "",
+
+    "ErrorWideTileTooBig":    "Große Fliesen kann nur bis zu 5 Bilder nehmen.",
+    "_ErrorWideTileTooBig.comment":    "",
+
+    "Page.FlowDirection":    "Von links nach rechts",
+    "_Page.FlowDirection.comment":    "FlowDirection for each page.",
+
+    "PicturesTitle":    "Bilder",
+    "_PicturesTitle.comment":    "Page sub-title on hub page.",
+
+    "PicturesViewTitle.Text":    "Bilder",
+    "_PicturesViewTitle.Text.comment":    "Page title on image browser page.",
+
+    "PreviewAppBarButton.Name":    "Vorschau",
+    "_PreviewAppBarButton.Name.comment":    "App bar button text.",
+
+    "PublisherDisplayNameProperty":    "Microsoft Corporation",
+    "_PublisherDisplayNameProperty.comment":    "PublisherDisplayName property value for the package manifest.",
+
+    "RotateAppBarButton.Name":    "Drehung",
+    "_RotateAppBarButton.Name.comment":    "App bar button text.",
+
+    "RotateImagePageTitle.Text":    "Bild drehen",
+    "_RotateImagePageTitle.Text.comment":    "Page title for snap view."
+}

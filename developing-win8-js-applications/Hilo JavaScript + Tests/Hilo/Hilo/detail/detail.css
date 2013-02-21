@@ -1,0 +1,76 @@
+﻿.detail.fragment {
+    -ms-grid-rows: 128px 1fr 128px;
+}
+
+@media screen and (-ms-view-state: snapped) {
+    .detail section[role=main] {
+        margin-left: 5px;
+    }
+
+    .detail.fragment {
+        -ms-grid-rows: 128px 300px 1fr;
+    }
+}
+
+@media screen and (-ms-view-state: portrait) {
+    .detail section[role=main] {
+        margin-left: 100px;
+    }
+}
+
+#filmstrip-backbutton {
+    display: inline;
+    float: left;
+    margin: 35px;
+}
+
+.detail .flipViewImage {
+    background-size: contain;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    height: 100%;
+    width: 100%;
+}
+
+.detail .flipViewBackground {
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    height: 100%;
+    width: 100%;
+}
+
+.detail img {
+    max-height: 100%;
+    max-width: 100%;
+    margin-top: 100px;
+}
+
+.detail .win-backbutton {
+    -ms-grid-column-align: start;
+    -ms-grid-row-align: start;
+    -ms-grid-column: 1;
+    -ms-grid-row: 1;
+}
+
+.detail #filmstrip {
+    height: 140px;
+}
+
+.detail .filmstrip-thumbnail {
+    width: 200px;
+    height: 100px;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.detail .win-flipview {
+    height: 100%;
+}
+
+
+.detail progress {
+    -ms-grid-column-align: center;
+    -ms-grid-row-align: center;
+    -ms-grid-row: 2;
+}

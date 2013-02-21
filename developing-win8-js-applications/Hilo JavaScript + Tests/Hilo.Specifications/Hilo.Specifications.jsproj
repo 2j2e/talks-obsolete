@@ -1,0 +1,274 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|AnyCPU">
+      <Configuration>Debug</Configuration>
+      <Platform>AnyCPU</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|ARM">
+      <Configuration>Debug</Configuration>
+      <Platform>ARM</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x86">
+      <Configuration>Debug</Configuration>
+      <Platform>x86</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|AnyCPU">
+      <Configuration>Release</Configuration>
+      <Platform>AnyCPU</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|ARM">
+      <Configuration>Release</Configuration>
+      <Platform>ARM</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x86">
+      <Configuration>Release</Configuration>
+      <Platform>x86</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>b6bf7ada-b5ea-43fe-b2e3-46fe16b95d23</ProjectGuid>
+  </PropertyGroup>
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\$(WMSJSProjectDirectory)\Microsoft.VisualStudio.$(WMSJSProject).Default.props" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\$(WMSJSProjectDirectory)\Microsoft.VisualStudio.$(WMSJSProject).props" />
+  <PropertyGroup>
+    <TargetPlatformIdentifier>Windows</TargetPlatformIdentifier>
+    <TargetPlatformVersion>8.0</TargetPlatformVersion>
+    <DefaultLanguage>en-US</DefaultLanguage>
+    <JSLintSkip>|\lib\</JSLintSkip>
+  </PropertyGroup>
+  <ItemGroup>
+    <AppxManifest Include="package.appxmanifest">
+      <SubType>Designer</SubType>
+    </AppxManifest>
+    <Content Include="..\Hilo\Hilo\bindFunctionsTo.js">
+      <Link>Hilo\bindFunctionsTo.js</Link>
+    </Content>
+    <Content Include="..\Hilo\Hilo\controls\Header\Header.css">
+      <Link>Hilo\controls\Header\Header.css</Link>
+    </Content>
+    <Content Include="..\Hilo\Hilo\controls\Header\Header.html">
+      <Link>Hilo\controls\Header\Header.html</Link>
+    </Content>
+    <Content Include="..\Hilo\Hilo\controls\Header\Header.js">
+      <Link>Hilo\controls\Header\Header.js</Link>
+    </Content>
+    <Content Include="..\Hilo\Hilo\controls\HiloAppBar\hiloAppBar.css">
+      <Link>Hilo\controls\HiloAppBar\hiloAppBar.css</Link>
+    </Content>
+    <Content Include="..\Hilo\Hilo\controls\HiloAppBar\hiloAppBar.html">
+      <Link>Hilo\controls\HiloAppBar\hiloAppBar.html</Link>
+    </Content>
+    <Content Include="..\Hilo\Hilo\controls\HiloAppBar\hiloAppBar.js">
+      <Link>Hilo\controls\HiloAppBar\hiloAppBar.js</Link>
+    </Content>
+    <Content Include="..\Hilo\Hilo\controls\HiloAppBar\hiloAppBarPresenter.js">
+      <Link>Hilo\controls\HiloAppBar\hiloAppBarPresenter.js</Link>
+    </Content>
+    <Content Include="..\Hilo\Hilo\controls\pageControlHelper.js">
+      <Link>Hilo\controls\pageControlHelper.js</Link>
+    </Content>
+    <Content Include="..\Hilo\Hilo\controls\pages.js">
+      <Link>Hilo\controls\pages.js</Link>
+    </Content>
+    <Content Include="..\Hilo\Hilo\crop\appBarPresenter.js">
+      <Link>Hilo\crop\appBarPresenter.js</Link>
+    </Content>
+    <Content Include="..\Hilo\Hilo\crop\crop.css">
+      <Link>Hilo\crop\crop.css</Link>
+    </Content>
+    <Content Include="..\Hilo\Hilo\crop\crop.html">
+      <Link>Hilo\crop\crop.html</Link>
+    </Content>
+    <Content Include="..\Hilo\Hilo\crop\crop.js">
+      <Link>Hilo\crop\crop.js</Link>
+    </Content>
+    <Content Include="..\Hilo\Hilo\crop\croppedImageWriter.js">
+      <Link>Hilo\crop\croppedImageWriter.js</Link>
+    </Content>
+    <Content Include="..\Hilo\Hilo\crop\cropPresenter.js">
+      <Link>Hilo\crop\cropPresenter.js</Link>
+    </Content>
+    <Content Include="..\Hilo\Hilo\crop\cropSelection.js">
+      <Link>Hilo\crop\cropSelection.js</Link>
+    </Content>
+    <Content Include="..\Hilo\Hilo\crop\cropSelectionController.js">
+      <Link>Hilo\crop\cropSelectionController.js</Link>
+    </Content>
+    <Content Include="..\Hilo\Hilo\crop\cropSelectionCorner.js">
+      <Link>Hilo\crop\cropSelectionCorner.js</Link>
+    </Content>
+    <Content Include="..\Hilo\Hilo\crop\cropSelectionView.js">
+      <Link>Hilo\crop\cropSelectionView.js</Link>
+    </Content>
+    <Content Include="..\Hilo\Hilo\crop\image.js">
+      <Link>Hilo\crop\image.js</Link>
+    </Content>
+    <Content Include="..\Hilo\Hilo\crop\imageView.js">
+      <Link>Hilo\crop\imageView.js</Link>
+    </Content>
+    <Content Include="..\Hilo\Hilo\detail\detail.html">
+      <Link>Hilo\detail\detail.html</Link>
+    </Content>
+    <Content Include="..\Hilo\Hilo\detail\detail.js">
+      <Link>Hilo\detail\detail.js</Link>
+    </Content>
+    <Content Include="..\Hilo\Hilo\detail\detailPresenter.js">
+      <Link>Hilo\detail\detailPresenter.js</Link>
+    </Content>
+    <Content Include="..\Hilo\Hilo\detail\filmstripPresenter.js">
+      <Link>Hilo\detail\filmstripPresenter.js</Link>
+    </Content>
+    <Content Include="..\Hilo\Hilo\detail\flipviewPresenter.js">
+      <Link>Hilo\detail\flipviewPresenter.js</Link>
+    </Content>
+    <Content Include="..\Hilo\Hilo\hub\hub.html">
+      <Link>Hilo\hub\hub.html</Link>
+    </Content>
+    <Content Include="..\Hilo\Hilo\hub\hub.js">
+      <Link>Hilo\hub\hub.js</Link>
+    </Content>
+    <Content Include="..\Hilo\Hilo\hub\hubPresenter.js">
+      <Link>Hilo\hub\hubPresenter.js</Link>
+    </Content>
+    <Content Include="..\Hilo\Hilo\hub\listViewPresenter.js">
+      <Link>Hilo\hub\listViewPresenter.js</Link>
+    </Content>
+    <Content Include="..\Hilo\Hilo\month\month.html">
+      <Link>Hilo\month\month.html</Link>
+    </Content>
+    <Content Include="..\Hilo\Hilo\month\month.js">
+      <Link>Hilo\month\month.js</Link>
+    </Content>
+    <Content Include="..\Hilo\Hilo\imageQueryBuilder.js">
+      <Link>Hilo\imageQueryBuilder.js</Link>
+    </Content>
+    <Content Include="..\Hilo\Hilo\month\monthPresenter.js">
+      <Link>Hilo\month\monthPresenter.js</Link>
+    </Content>
+    <Content Include="..\Hilo\Hilo\month\yearList.js">
+      <Link>Hilo\month\yearList.js</Link>
+    </Content>
+    <Content Include="..\Hilo\Hilo\PageControlNavigator.js">
+      <Link>Hilo\PageControlNavigator.js</Link>
+    </Content>
+    <Content Include="..\Hilo\Hilo\dateFormatter.js">
+      <Link>Hilo\dateFormatter.js</Link>
+    </Content>
+    <Content Include="..\Hilo\Hilo\Picture.js">
+      <Link>Hilo\Picture.js</Link>
+    </Content>
+    <Content Include="..\Hilo\Hilo\rotate\appBarPresenter.js">
+      <Link>Hilo\rotate\appBarPresenter.js</Link>
+    </Content>
+    <Content Include="..\Hilo\Hilo\rotate\rotate.css">
+      <Link>Hilo\rotate\rotate.css</Link>
+    </Content>
+    <Content Include="..\Hilo\Hilo\rotate\rotate.html">
+      <Link>Hilo\rotate\rotate.html</Link>
+    </Content>
+    <Content Include="..\Hilo\Hilo\rotate\rotate.js">
+      <Link>Hilo\rotate\rotate.js</Link>
+    </Content>
+    <Content Include="..\Hilo\Hilo\rotate\rotatePresenter.js">
+      <Link>Hilo\rotate\rotatePresenter.js</Link>
+    </Content>
+    <Content Include="..\Hilo\Hilo\Tiles\createTileFriendlyImages.js">
+      <Link>Hilo\Tiles\createTileFriendlyImages.js</Link>
+    </Content>
+    <Content Include="..\Hilo\Hilo\Tiles\populateTemplate.js">
+      <Link>Hilo\Tiles\populateTemplate.js</Link>
+    </Content>
+    <Content Include="..\Hilo\Hilo\Tiles\createTileUpdates.js">
+      <Link>Hilo\Tiles\createTileUpdates.js</Link>
+    </Content>
+    <Content Include="..\Hilo\Hilo\Tiles\TileUpdater.js">
+      <Link>Hilo\Tiles\TileUpdater.js</Link>
+    </Content>
+    <Content Include="..\Hilo\Hilo\urlCache.js">
+      <Link>Hilo\urlCache.js</Link>
+    </Content>
+    <Content Include="default.css" />
+    <Content Include="default.html" />
+    <Content Include="default.js" />
+    <Content Include="images\logo.png" />
+    <Content Include="images\smalllogo.png" />
+    <Content Include="images\splashscreen.png" />
+    <Content Include="images\storelogo.png" />
+    <Content Include="lib\chai.js" />
+    <Content Include="lib\mocha.css" />
+    <Content Include="lib\mocha.js" />
+    <Content Include="lib\readme.txt" />
+    <Content Include="placeholder.html" />
+    <Content Include="specRunner.js" />
+    <Content Include="sampleImages\001.jpg" />
+    <Content Include="sampleImages\002.png" />
+    <Content Include="sampleImages\003.bmp" />
+    <Content Include="sampleImages\004.tiff" />
+    <Content Include="sampleImages\005.jpg" />
+    <Content Include="sampleImages\006.jpg" />
+    <Content Include="sampleImages\007.jpg" />
+    <Content Include="sampleImages\008.png" />
+    <Content Include="sampleImages\009.png" />
+    <Content Include="sampleImages\010.png" />
+    <Content Include="sampleImages\011.bmp" />
+    <Content Include="sampleImages\012.bmp" />
+    <Content Include="sampleImages\013.bmp" />
+    <Content Include="sampleImages\014.tiff" />
+    <Content Include="sampleImages\015.tiff" />
+    <Content Include="sampleImages\016.tiff" />
+    <Content Include="sampleImages\too-big-for-tile-image.png" />
+    <Content Include="specs\crop\appBarPresenter.spec.js" />
+    <Content Include="specs\crop\image.spec.js" />
+    <Content Include="specs\crop\imageView.spec.js" />
+    <Content Include="specs\crop\cropSelection.spec.js" />
+    <Content Include="specs\crop\cropSelectionController.spec.js" />
+    <Content Include="specs\crop\cropSelectionCorner.spec.js" />
+    <Content Include="specs\crop\cropSelectionView.spec.js" />
+    <Content Include="specs\detail\detailPresenter.spec.js" />
+    <Content Include="specs\detail\filmstripPresenter.spec.js" />
+    <Content Include="specs\detail\flipviewPresenter.spec.js" />
+    <Content Include="specs\Helpers\spec.helpers.js" />
+    <Content Include="specs\hub\hubPresenter.spec.js" />
+    <Content Include="specs\hub\listViewPresenter.spec.js" />
+    <Content Include="specs\HiloAppbar\hiloAppbarPresenter.spec.js" />
+    <Content Include="specs\month\monthPresenter.spec.js" />
+    <Content Include="specs\pageControl\pageControlHelper.spec.js" />
+    <Content Include="specs\Picture\Picture.spec.js" />
+    <Content Include="specs\queries\imageQueryBuilder.spec.js" />
+    <Content Include="specs\Rotate\appBarPresenter.spec.js" />
+    <Content Include="specs\Rotate\rotatePresenter.spec.js" />
+    <Content Include="specs\Helpers\MocksAndStubs.js" />
+    <Content Include="specs\Helpers\shared.js" />
+    <Content Include="specs\Tiles\createTileFriendlyImages.spec.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Hilo\controls\Header\" />
+    <Folder Include="Hilo\controls\HiloAppBar\" />
+    <Folder Include="Hilo\crop\" />
+    <Folder Include="Hilo\hub\" />
+    <Folder Include="Hilo\detail\" />
+    <Folder Include="Hilo\month\" />
+    <Folder Include="Hilo\rotate\" />
+  </ItemGroup>
+  <ItemGroup>
+    <SDKReference Include="Microsoft.WinJS.1.0, Version=1.0" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\$(WMSJSProjectDirectory)\Microsoft.VisualStudio.$(WMSJSProject).targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

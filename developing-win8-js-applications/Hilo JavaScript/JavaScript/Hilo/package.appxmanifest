@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Package xmlns="http://schemas.microsoft.com/appx/2010/manifest">
+  <Identity Name="Microsoft.SDKSamples.Hilo.JS" Publisher="CN=test" Version="1.0.0.0" />
+  <Properties>
+    <DisplayName>ms-resource:DisplayNameProperty</DisplayName>
+    <Logo>images\HiloStoreLogo.png</Logo>
+    <PublisherDisplayName>ms-resource:PublisherDisplayNameProperty</PublisherDisplayName>
+  </Properties>
+  <Prerequisites>
+    <OSMinVersion>6.2.0</OSMinVersion>
+    <OSMaxVersionTested>6.2.0</OSMaxVersionTested>
+  </Prerequisites>
+  <Resources>
+    <Resource Language="x-generate" />
+  </Resources>
+  <Applications>
+    <Application Id="App" StartPage="default.html">
+      <VisualElements DisplayName="ms-resource:DisplayName" Logo="images\HiloLogo.png" SmallLogo="images\HiloSmallLogo.png" Description="ms-resource:Description" ForegroundText="light" BackgroundColor="#00b2f0">
+        <DefaultTile ShowName="allLogos" WideLogo="images\HiloWideLogo.png" ShortName="ms-resource:ShortName" />
+        <SplashScreen Image="images\HiloSplash.png" BackgroundColor="#292929" />
+      </VisualElements>
+    </Application>
+  </Applications>
+  <Capabilities>
+    <Capability Name="picturesLibrary" />
+    <Capability Name="internetClient" />
+  </Capabilities>
+</Package>

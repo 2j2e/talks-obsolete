@@ -1,0 +1,77 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>crop</title>
+
+    <link href="crop.css" rel="stylesheet" />
+
+    <script src="/Hilo/imageWriter.js"></script>
+    <script src="/Hilo/exifHelpers.js"></script>
+    <script src="croppedImageWriter.js"></script>
+    <script src="cropSelection.js"></script>
+    <script src="cropSelectionView.js"></script>
+    <script src="cropSelectionCorner.js"></script>
+    <script src="cropSelectionController.js"></script>
+    <script src="image.js"></script>
+    <script src="imageView.js"></script>
+    <script src="appBarPresenter.js"></script>
+    <script src="cropPresenter.js"></script>
+    <script src="crop.js"></script>
+</head>
+<body>
+    <div class="crop fragment">
+
+        <div id="crop-header" data-win-control="WinJS.UI.HtmlControl"
+            data-win-options="{uri: '/Hilo/Controls/Header/Header.html', titleResource: 'CropImagePageTitle.Text' }">
+        </div>
+
+        <section aria-label="Main content" role="main">
+            <div class="content-wrapper">
+
+                <div id="cropSelection">
+                    <div id="topLeft" class="corner">&nbsp;</div>
+                    <div id="topRight" class="corner">&nbsp;</div>
+                    <div id="bottomLeft" class="corner">&nbsp;</div>
+                    <div id="bottomRight" class="corner">&nbsp;</div>
+                    <div id="topMiddle" class="corner">&nbsp;</div>
+                    <div id="rightMiddle" class="corner">&nbsp;</div>
+                    <div id="bottomMiddle" class="corner">&nbsp;</div>
+                    <div id="leftMiddle" class="corner">&nbsp;</div>
+                </div>
+
+                <div class="canvas-wrapper">
+                    <canvas id="cropSurface"></canvas>
+                </div>
+
+                <img src="#" id="image" class="rotatable" />
+            </div>
+        </section>
+
+        <div id="appbar" data-win-control="WinJS.UI.AppBar">
+            <button
+                class="snap-view-button"
+                id="unSnap"
+                data-win-control="WinJS.UI.AppBarCommand"
+                data-win-options="{id:'crop', icon:'crop', section: 'selection'}"
+                data-win-res="{winControl: {label:'CropAppBarButton.Name'}}">
+            </button>
+
+            <button
+                id="reset"
+                data-win-control="WinJS.UI.AppBarCommand"
+                data-win-options="{icon:'cancel', section: 'global'}"
+                data-win-res="{winControl: {label:'CancelAppBarButton.Name'}}">
+            </button>
+
+            <button
+                id="save"
+                class="full-screen-button"
+                data-win-control="WinJS.UI.AppBarCommand"
+                data-win-options="{icon:'save', section: 'global'}"
+                data-win-res="{winControl: {label:'AcceptAppBarButton.Name'}}">
+            </button>
+        </div>
+    </div>
+</body>
+</html>

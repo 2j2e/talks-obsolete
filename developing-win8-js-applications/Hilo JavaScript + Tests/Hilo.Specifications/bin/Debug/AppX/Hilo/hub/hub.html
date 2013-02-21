@@ -1,0 +1,45 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>hub</title>
+
+    <link href="hub.css" rel="stylesheet" />
+
+    <script src="listViewPresenter.js"></script>
+    <script src="hubPresenter.js"></script>
+    <script src="hub.js"></script>
+</head>
+<body>
+    <div class="fragment hub">
+
+        <div data-win-control="WinJS.UI.HtmlControl"
+            data-win-options="{ uri: '/Hilo/Controls/Header/Header.html', titleResource: 'AppName.Text' }">
+        </div>
+        <section aria-label="Main content" role="main">
+
+            <div id="hub-image-template" data-win-control="WinJS.Binding.Template">
+                <div data-win-bind="style.backgroundImage: url.backgroundUrl; alt: name; className: className" class="thumbnail">
+                </div>
+            </div>
+
+
+            <div class="layoutContainer">
+                <div class="empty-library" style="display: none">
+                    <span data-win-res="{textContent: 'EmptyPicturesTitle'}"></span>
+                </div>
+
+                <a id="navigateToMonth" href="/Hilo/month/month.html" data-navigate>
+                    <h2 data-win-res="{textContent: 'PicturesTitle'}"></h2>
+                </a>
+                <div id="picturesLibrary"
+                    data-win-control="WinJS.UI.ListView"
+                    data-win-options="{ 
+                    itemTemplate: select('#hub-image-template'), 
+                    selectionMode: 'single'}" />
+            </div>
+        </section>
+        <section id="image-nav" data-win-control="WinJS.UI.HtmlControl" data-win-options="{uri: '/Hilo/controls/HiloAppBar/hiloAppBar.html'}"></section>
+    </div>
+</body>
+</html>

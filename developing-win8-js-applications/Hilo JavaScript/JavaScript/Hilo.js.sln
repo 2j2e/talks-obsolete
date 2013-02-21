@@ -1,0 +1,56 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{262852C6-CD72-467D-83FE-5EEB1973A190}") = "Hilo", "Hilo\Hilo.jsproj", "{C5DBA0B4-9FC5-4167-974B-5CE6E74DE0EC}"
+EndProject
+Global
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 1
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = http://rd18-tfs:8080/tfs/defaultcollection
+		SccProjectUniqueName0 = Hilo\\Hilo.jsproj
+		SccProjectName0 = Hilo
+		SccAuxPath0 = http://rd18-tfs:8080/tfs/defaultcollection
+		SccLocalPath0 = Hilo
+		SccProvider0 = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|ARM = Debug|ARM
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release|Any CPU = Release|Any CPU
+		Release|ARM = Release|ARM
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C5DBA0B4-9FC5-4167-974B-5CE6E74DE0EC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C5DBA0B4-9FC5-4167-974B-5CE6E74DE0EC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C5DBA0B4-9FC5-4167-974B-5CE6E74DE0EC}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{C5DBA0B4-9FC5-4167-974B-5CE6E74DE0EC}.Debug|ARM.ActiveCfg = Debug|ARM
+		{C5DBA0B4-9FC5-4167-974B-5CE6E74DE0EC}.Debug|ARM.Build.0 = Debug|ARM
+		{C5DBA0B4-9FC5-4167-974B-5CE6E74DE0EC}.Debug|ARM.Deploy.0 = Debug|ARM
+		{C5DBA0B4-9FC5-4167-974B-5CE6E74DE0EC}.Debug|x64.ActiveCfg = Debug|x64
+		{C5DBA0B4-9FC5-4167-974B-5CE6E74DE0EC}.Debug|x64.Build.0 = Debug|x64
+		{C5DBA0B4-9FC5-4167-974B-5CE6E74DE0EC}.Debug|x64.Deploy.0 = Debug|x64
+		{C5DBA0B4-9FC5-4167-974B-5CE6E74DE0EC}.Debug|x86.ActiveCfg = Debug|x86
+		{C5DBA0B4-9FC5-4167-974B-5CE6E74DE0EC}.Debug|x86.Build.0 = Debug|x86
+		{C5DBA0B4-9FC5-4167-974B-5CE6E74DE0EC}.Debug|x86.Deploy.0 = Debug|x86
+		{C5DBA0B4-9FC5-4167-974B-5CE6E74DE0EC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C5DBA0B4-9FC5-4167-974B-5CE6E74DE0EC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C5DBA0B4-9FC5-4167-974B-5CE6E74DE0EC}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{C5DBA0B4-9FC5-4167-974B-5CE6E74DE0EC}.Release|ARM.ActiveCfg = Release|ARM
+		{C5DBA0B4-9FC5-4167-974B-5CE6E74DE0EC}.Release|ARM.Build.0 = Release|ARM
+		{C5DBA0B4-9FC5-4167-974B-5CE6E74DE0EC}.Release|ARM.Deploy.0 = Release|ARM
+		{C5DBA0B4-9FC5-4167-974B-5CE6E74DE0EC}.Release|x64.ActiveCfg = Release|x64
+		{C5DBA0B4-9FC5-4167-974B-5CE6E74DE0EC}.Release|x64.Build.0 = Release|x64
+		{C5DBA0B4-9FC5-4167-974B-5CE6E74DE0EC}.Release|x64.Deploy.0 = Release|x64
+		{C5DBA0B4-9FC5-4167-974B-5CE6E74DE0EC}.Release|x86.ActiveCfg = Release|x86
+		{C5DBA0B4-9FC5-4167-974B-5CE6E74DE0EC}.Release|x86.Build.0 = Release|x86
+		{C5DBA0B4-9FC5-4167-974B-5CE6E74DE0EC}.Release|x86.Deploy.0 = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

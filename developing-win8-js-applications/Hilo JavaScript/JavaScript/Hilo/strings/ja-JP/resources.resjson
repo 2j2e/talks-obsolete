@@ -1,0 +1,60 @@
+﻿// For details on localizing a Windows app, see: http://go.microsoft.com/fwlink/?LinkId=212836
+
+{
+    "AcceptAppBarButton.Name":    "承認",
+    "_AcceptAppBarButton.Name.comment":    "App bar button text.",
+
+    "AppBar.FlowDirection":    "LeftToRight",
+    "_AppBar.FlowDirection.comment":    "FlowDirection for every app bar.",
+
+    "AppName.Text":    "ヒーロ",
+    "_AppName.Text.comment":    "Page title on hub page.",
+
+    "CancelAppBarButton.Name":    "取り消し",
+    "_CancelAppBarButton.Name.comment":    "App bar button text.",
+
+    "CropAppBarButton.Name":    "切り抜き",
+    "_CropAppBarButton.Name.comment":    "App bar button text.",
+
+    "CropImagePageTitle.Text":    "図の切り抜き",
+    "_CropImagePageTitle.Text.comment":    "Page title for snap view.",
+
+    "Description":    "JSとHTMLを用いた写真アプリケーション",
+    "_Description.comment":    "Description field for the package manifest.",
+
+    "DisplayName":    "ヒーロJavaScript",
+    "_DisplayName.comment":    "DisplayName property value for the Visual Element in the package manifest.",
+
+    "DisplayNameProperty":    "ヒーロJavaScript",
+    "_DisplayNameProperty.comment":    "DisplayName property value for the package manifest. (Hilo)",
+
+    "EmptyPicturesTitle":    "フォルダーに写真がありません",
+    "_EmptyPicturesTitle.comment":    "Displayed on hub page when there are no photos in the users pictures library.",
+
+    "ErrorFailedToCreateInitialPage":    "初期ページの作成に失敗しました",
+    "_ErrorFailedToCreateInitialPage.comment":    "",
+
+    "ErrorWideTileTooBig":    "ワイドタイルは５イメージまでしか",
+    "_ErrorWideTileTooBig.comment":    "",
+
+    "Page.FlowDirection":    "LeftToRight",
+    "_Page.FlowDirection.comment":    "FlowDirection for each page for this language. Set to appropriate value. Do not translate.",
+
+    "PicturesTitle":    "写真",
+    "_PicturesTitle.comment":    "Page sub-title on hub page.",
+
+    "PicturesViewTitle.Text":    "写真",
+    "_PicturesViewTitle.Text.comment":    "Page title on image browser page.",
+
+    "PreviewAppBarButton.Name":    "プレビュー",
+    "_PreviewAppBarButton.Name.comment":    "App bar button text.",
+
+    "PublisherDisplayNameProperty":    "マイクロソフトコーポレーション",
+    "_PublisherDisplayNameProperty.comment":    "PublisherDisplayName property value for the package manifest.",
+
+    "RotateAppBarButton.Name":    "回転",
+    "_RotateAppBarButton.Name.comment":    "App bar button text.",
+
+    "RotateImagePageTitle.Text":    "写真の回転",
+    "_RotateImagePageTitle.Text.comment":    "Page title for snap view."
+}

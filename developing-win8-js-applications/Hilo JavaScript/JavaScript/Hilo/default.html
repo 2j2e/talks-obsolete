@@ -1,0 +1,40 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Hilo</title>
+
+    <!-- WinJS references -->
+    <link href="//Microsoft.WinJS.1.0/css/ui-dark.css" rel="stylesheet" />
+    <script src="//Microsoft.WinJS.1.0/js/base.js"></script>
+    <script src="//Microsoft.WinJS.1.0/js/ui.js"></script>
+
+    <!-- Hilo references -->
+    <link href="/default.css" rel="stylesheet" />
+    <script src="/default.js"></script>
+    <script src="/Hilo/bindFunctionsTo.js"></script>
+    <script src="/Hilo/urlCache.js"></script>
+    <script src="/Hilo/PageControlNavigator.js"></script>
+    <script src="/Hilo/controls/pages.js"></script>
+    <script src="/Hilo/controls/pageControlHelper.js"></script>
+    <script src="/Hilo/controls/HiloAppBar/hiloAppBarPresenter.js"></script>
+    <script src="/Hilo/dateFormatter.js"></script>
+    <script src="/Hilo/contentChangedListener.js"></script>
+    <script src="/Hilo/urlCache.js"></script>
+
+    <!-- Image Query Builder -->
+    <script src="/Hilo/Picture.js"></script>
+    <script src="/Hilo/imageQueryBuilder.js"></script>
+
+    <!-- Live Tile -->
+    <script src="/Hilo/Tiles/createTileFriendlyImages.js"></script>
+    <script src="/Hilo/Tiles/populateTemplate.js"></script>
+    <script src="/Hilo/Tiles/createTileUpdates.js"></script>
+    <script src="/Hilo/Tiles/TileUpdater.js"></script>
+
+</head>
+<body>
+    <div id="contenthost" data-win-control="Hilo.PageControlNavigator" data-win-options="{home: '/Hilo/hub/hub.html'}">
+    </div>
+</body>
+</html>

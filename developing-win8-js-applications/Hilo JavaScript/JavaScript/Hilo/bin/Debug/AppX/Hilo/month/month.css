@@ -1,0 +1,149 @@
+﻿.month .thumbnail {
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 200px;
+    width: 200px;
+}
+
+.month .win-template.win-groupheader {
+    overflow: visible;
+}
+
+.month .win-groupheader span {
+    white-space: nowrap;
+    overflow: visible;
+}
+
+.month .win-ring {
+    -ms-grid-row-span: 1;
+    -ms-grid-row: 2;
+    -ms-grid-column-align: center;
+    -ms-grid-row-align: center;
+    height: 40px;
+    width: 40px;
+}
+
+.month .semanticZoomContainer {
+    /* 
+        The semantic zoom control produces a container that will collapse,
+        and consequently the list view controls inside will only be one row
+        tall. We want them to use all of the available space, so we tell the
+        semantic zoom to use all of the available height.        
+        */
+    height: 100%;
+}
+
+    .month .semanticZoomContainer .win-horizontal.win-viewport .win-surface {
+        margin-bottom: 60px;
+        margin-left: 50px;
+        margin-right: 120px;
+    }
+
+    .month .semanticZoomContainer .win-listview .win-groupheader {
+        padding: 0;
+        margin: 0;
+        padding-bottom: 20px;
+        margin-left: 70px;
+        overflow: visible;
+    }
+
+.month .yearMonthItem {
+    background-color: #F19720;
+    width: 150px;
+    height: 150px;
+    position: relative;
+}
+
+    .month .yearMonthItem span {
+        position: absolute;
+        bottom: 8px;
+        right: 8px;
+        color: black;
+        font-weight: bold;
+        font-size: 18px;
+    }
+
+
+.month .year-group {
+    display: -ms-grid;
+}
+
+    .month .year-group .header {
+        font-size: 36px;
+        -ms-grid-row: 1;
+    }
+
+    .month .year-group .body {
+        display: -ms-flexbox;
+        -ms-flex-wrap: wrap;
+        -ms-grid-row: 2;
+        width: 640px;
+        height: 480px;
+    }
+
+    .month .year-group .month-item {
+        width: 142px;
+        height: 142px;
+        background-color: #F19720;
+        color: black;
+        margin-right: 10px;
+        margin-bottom: 10px;
+        position: relative;
+        border: 4px solid transparent;
+    }
+
+        .month .year-group .month-item:hover {
+            border: 4px solid gray;
+        }
+
+        .month .year-group .month-item[disabled="true"] {
+            background-color: white;
+        }
+
+        .month .year-group .month-item .month-name {
+            -ms-grid-row-align: end;
+            -ms-grid-column-align: end;
+            display: block;
+            -ms-grid-row: 1;
+            -ms-grid-column: 1;
+            font-size: 28px;
+            position: absolute;
+            bottom: 10px;
+            right: 10px;
+        }
+
+
+.month #yeargroup .win-listview :not(.win-footprint).win-container {
+    background-color: transparent;
+}
+
+.month #yeargroup, .month .win-listview {
+    height: 100%;
+}
+
+    .month #yeargroup .win-container:hover {
+        outline: transparent none 5px;
+    }
+
+@media screen and (-ms-high-contrast) {
+    .month-item {
+        -ms-high-contrast-adjust: none;
+    }
+}
+
+@media screen and (-ms-view-state: snapped) {
+
+    .month .semanticZoomContainer .win-viewport .win-surface {
+        margin-left: 0;
+    }
+
+    .win-listview :not(.win-footprint).win-container {
+        background-color: transparent;
+    }
+
+    .month .thumbnail {
+        margin-top: 2px;
+        width: auto;
+        height: 200px;
+    }
+}

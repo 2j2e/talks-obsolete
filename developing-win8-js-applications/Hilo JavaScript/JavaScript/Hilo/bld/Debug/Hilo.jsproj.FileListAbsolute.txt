@@ -1,0 +1,13 @@
+C:\dev\git\presentations\developing-win8-js-applications\Hilo JavaScript\JavaScript\Hilo\bin\Debug\resources.pri
+C:\dev\git\presentations\developing-win8-js-applications\Hilo JavaScript\JavaScript\Hilo\bin\Debug\AppxManifest.xml
+C:\dev\git\presentations\developing-win8-js-applications\Hilo JavaScript\JavaScript\Hilo\bin\Debug\Hilo.build.appxrecipe
+C:\dev\git\presentations\developing-win8-js-applications\Hilo JavaScript\JavaScript\Hilo\bld\Debug\priconfig.xml.intermediate
+C:\dev\git\presentations\developing-win8-js-applications\Hilo JavaScript\JavaScript\Hilo\bld\Debug\layout.resfiles.intermediate
+C:\dev\git\presentations\developing-win8-js-applications\Hilo JavaScript\JavaScript\Hilo\bld\Debug\resources.resfiles.intermediate
+C:\dev\git\presentations\developing-win8-js-applications\Hilo JavaScript\JavaScript\Hilo\bld\Debug\pri.resfiles.intermediate
+C:\dev\git\presentations\developing-win8-js-applications\Hilo JavaScript\JavaScript\Hilo\bld\Debug\priconfig.xml
+C:\dev\git\presentations\developing-win8-js-applications\Hilo JavaScript\JavaScript\Hilo\bld\Debug\layout.resfiles
+C:\dev\git\presentations\developing-win8-js-applications\Hilo JavaScript\JavaScript\Hilo\bld\Debug\resources.resfiles
+C:\dev\git\presentations\developing-win8-js-applications\Hilo JavaScript\JavaScript\Hilo\bld\Debug\pri.resfiles
+C:\dev\git\presentations\developing-win8-js-applications\Hilo JavaScript\JavaScript\Hilo\bld\Debug\LanguageQualifiers.txt
+C:\dev\git\presentations\developing-win8-js-applications\Hilo JavaScript\JavaScript\Hilo\bld\Debug\ProjectArchitectures.txt

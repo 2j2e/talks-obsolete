@@ -1,0 +1,57 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>month</title>
+
+    <link href="month.css" rel="stylesheet" />
+    <script src="monthPresenter.js"></script>
+    <script src="yearList.js"></script>
+    <script src="month.js"></script>
+</head>
+<body>
+    <div class="month fragment">
+
+        <div data-win-control="WinJS.UI.HtmlControl"
+            data-win-options="{uri: '/Hilo/Controls/Header/Header.html', titleResource: 'PicturesViewTitle.Text' }" data-win-design-locked="true">
+        </div>
+
+        <section aria-label="Main content" role="main" data-win-design-locked="true">
+            <div id="monthItemTemplate" data-win-control="WinJS.Binding.Template">
+                <div data-win-bind="style.backgroundImage: url.backgroundUrl; className: className"></div>
+            </div>
+
+            <div id="monthGroupHeaderTemplate" data-win-control="WinJS.Binding.Template">
+                <a class="monthLink" href="#"><span data-win-bind="innerHTML: title"></span>&nbsp;(<span data-win-bind="innerText: count"></span>)</a>
+            </div>
+
+            <div id="monthSnappedTemplate" data-win-control="WinJS.Binding.Template">
+                <span data-win-bind="innerHTML: title"></span>&nbsp;(<span data-win-bind="innerText: count"></span>)
+                <div data-win-bind="style.backgroundImage: backgroundUrl;" class="thumbnail"></div>
+            </div>
+
+            <div id="yearItemTemplate" data-win-control="WinJS.Binding.Template">
+                <div class="yearMonthItem"><span data-win-bind="innerHTML: title"></span></div>
+            </div>
+
+            <div id="yearGroupHeaderTemplate" data-win-control="WinJS.Binding.Template">
+                <span data-win-bind="innerHTML: title"></span>
+            </div>
+            <div class="semanticZoomContainer" data-win-control="WinJS.UI.SemanticZoom">
+
+                <div id="monthgroup" data-win-control="WinJS.UI.ListView" data-win-options="{ 
+                    layout: {type: WinJS.UI.GridLayout},
+                    selectionMode: 'single'}">
+                </div>
+
+                <div id="yeargroup" data-win-control="Hilo.month.YearList">
+                </div>
+
+            </div>
+
+        </section>
+        <progress id="loadingProgress" class="win-ring"></progress>
+        <section id="image-nav" data-win-control="WinJS.UI.HtmlControl" data-win-options="{uri: '/Hilo/controls/HiloAppBar/hiloAppBar.html'}" data-win-design-locked="true"></section>
+    </div>
+</body>
+</html>

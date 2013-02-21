@@ -1,0 +1,72 @@
+﻿// For details on localizing a Windows app, see: http://go.microsoft.com/fwlink/?LinkId=212836
+
+{
+    "AcceptAppBarButton.Name":    "Accept",
+    "_AcceptAppBarButton.Name.comment":    "App bar button text.",
+
+    "AppBar.FlowDirection":    "LeftToRight",
+    "_AppBar.FlowDirection.comment":    "Choose LeftToRight or RightToLeft, depending on your language.",
+
+    "AppName.Text":    "Hilo",
+    "_AppName.Text.comment":    "Page title on hub page.",
+
+    "BytesUnit":    "B",
+    "_BytesUnit.comment":    "Used by FileSizeConverter.",
+
+    "CancelAppBarButton.Name":    "Cancel",
+    "_CancelAppBarButton.Name.comment":    "App bar button text.",
+
+    "CropAppBarButton.Name":    "Crop",
+    "_CropAppBarButton.Name.comment":    "App bar button text.",
+
+    "CropImagePageTitle.Text":    "Crop picture",
+    "_CropImagePageTitle.Text.comment":    "Page title for snap view.",
+
+    "Description":    "A photo app using JavaScript, WinJS/WinRT, HTML and CSS",
+    "_Description.comment":    "Description field for the package manifest.",
+
+    "DisplayName":    "Hilo JavaScript",
+    "_DisplayName.comment":    "DisplayName property value for the Visual Element in the package manifest.",
+
+    "DisplayNameProperty":    "Hilo JavaScript",
+    "_DisplayNameProperty.comment":    "DisplayName property value for the package manifest.",
+
+    "EmptyPicturesTitle":    "The picture folder is empty.",
+    "_EmptyPicturesTitle.comment":    "Displayed on hub page when there are no photos in the users pictures library.",
+
+    "ErrorFailedToCreateInitialPage":    "Failed to create initial page",
+    "_ErrorFailedToCreateInitialPage.comment":    "Exception message.",
+
+    "ErrorWideTileTooBig":    "Wide tile can only take up to 5 images.",
+    "_ErrorWideTileTooBig.comment":    "Exception message.",
+
+    "KilobytesUnit":    "KB",
+    "_KilobytesUnit.comment":    "Used by FileSizeConverter.",
+
+    "MegabytesUnit":    "MB",
+    "_MegabytesUnit.comment":    "Used by FileSizeConverter.",
+
+    "Page.FlowDirection":    "LeftToRight",
+    "_Page.FlowDirection.comment":    "FlowDirection for each page.",
+
+    "PicturesTitle":    "Pictures",
+    "_PicturesTitle.comment":    "Page sub-title on hub page.",
+
+    "PicturesViewTitle.Text":    "Pictures",
+    "_PicturesViewTitle.Text.comment":    "Page title on image browser page.",
+
+    "PreviewAppBarButton.Name":    "Preview",
+    "_PreviewAppBarButton.Name.comment":    "App bar button text.",
+
+    "PublisherDisplayNameProperty":    "Microsoft Corporation",
+    "_PublisherDisplayNameProperty.comment":    "PublisherDisplayName property value for the package manifest.",
+
+    "RotateAppBarButton.Name":    "Rotate",
+    "_RotateAppBarButton.Name.comment":    "App bar button text.",
+
+    "RotateImagePageTitle.Text":    "Rotate picture",
+    "_RotateImagePageTitle.Text.comment":    "Page title for snap view.",
+
+    "ShortName":    "Hilo JavaScript",
+    "_ShortName.comment":    "ShortName property value in the package manifest. Appears as a tooltip on the Start screen. Also appears on the default wide and square tiles."
+}

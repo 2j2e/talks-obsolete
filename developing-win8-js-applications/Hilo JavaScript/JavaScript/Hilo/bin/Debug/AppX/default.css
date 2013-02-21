@@ -1,0 +1,78 @@
+﻿html {
+    cursor: default;
+}
+
+body {
+    background-color: #292929;
+}
+
+#contenthost {
+    height: 100%;
+    width: 100%;
+}
+
+a {
+    color: white;
+}
+
+    a:hover {
+        color: orange;
+    }
+
+.win-listview .win-container:hover {
+    outline: orange solid 5px;
+    background-color: orange;
+}
+
+:not(.win-selectionstylefilled).win-listview .win-selected.win-container .win-selectionborder, :not(.win-selectionstylefilled).win-listview .win-selected.win-container:hover .win-selectionborder {
+    border: orange solid 3px;
+    background-color: orange;
+}
+
+:not(.win-selectionstylefilled).win-listview .win-selected.win-container .win-selectioncheckmarkbackground, :not(.win-selectionstylefilled).win-listview .win-selected.win-container:hover .win-selectioncheckmarkbackground {
+    border-right-color: orange;
+    border-top-color: orange;
+}
+
+.win-listview :not(.win-footprint).win-container.win-selected {
+    background-color: orange;
+}
+
+.fragment {
+    /* Define a grid with rows for a banner and a body */
+    -ms-grid-columns: 1fr;
+    -ms-grid-rows: 128px 1fr 0;
+    display: -ms-grid;
+    height: 100%;
+    width: 100%;
+}
+
+    .fragment section[role=main] {
+        -ms-grid-row: 2;
+        height: 100%;
+        width: 100%;
+    }
+
+.full-screen-button {
+    display: inline;
+}
+
+.snap-view-button {
+    display: none;
+}
+
+@media screen and (-ms-high-contrast) {
+    .thumbnail, .flipViewImage, .filmstrip-thumbnail {
+        -ms-high-contrast-adjust: none;
+    }
+}
+
+@media screen and (-ms-view-state: snapped) {
+    .full-screen-button {
+        display: none;
+    }
+
+    .snap-view-button {
+        display: inline;
+    }
+}

@@ -1,0 +1,361 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Machine>SCOOBYDOO</Machine>
+    <WindowsUser>jeje</WindowsUser>
+    <SolutionConfiguration>Debug|AnyCPU</SolutionConfiguration>
+    <PackageArchitecture>neutral</PackageArchitecture>
+    <RegisteredManifestChecksum>87BC4E18EB3193BFACBDD8B83A3D954FCD7E2F9D6BB95900E2852F1F01909D5F</RegisteredManifestChecksum>
+    <RegisteredPackageMoniker>Microsoft.SDKSamples.Hilo.JS_1.0.0.0_neutral__yps17xarsp2at</RegisteredPackageMoniker>
+    <RegisteredUserModeAppID>Microsoft.SDKSamples.Hilo.JS_yps17xarsp2at!App</RegisteredUserModeAppID>
+    <RegisteredPackageID>Microsoft.SDKSamples.Hilo.JS</RegisteredPackageID>
+    <RegisteredPackagePublisher>CN=test</RegisteredPackagePublisher>
+    <RegisteredVersion>1.0.0.0</RegisteredVersion>
+  </PropertyGroup>
+  <ItemGroup>
+    <AppXManifest Include="C:\dev\git\presentations\developing-win8-js-applications\Hilo JavaScript + Tests\Hilo\bin\Debug\AppxManifest.xml">
+      <PackagePath>AppxManifest.xml</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2013-02-21T15:58:02.783</Modified>
+    </AppXManifest>
+  </ItemGroup>
+  <ItemGroup>
+    <AppxPackagedFile Include="C:\dev\git\presentations\developing-win8-js-applications\Hilo JavaScript + Tests\Hilo\default.css">
+      <PackagePath>default.css</PackagePath>
+      <Modified>2012-12-07T07:30:40.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\dev\git\presentations\developing-win8-js-applications\Hilo JavaScript + Tests\Hilo\Hilo\controls\Header\Header.css">
+      <PackagePath>Hilo\controls\Header\Header.css</PackagePath>
+      <Modified>2012-12-07T07:30:40.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\dev\git\presentations\developing-win8-js-applications\Hilo JavaScript + Tests\Hilo\Hilo\controls\HiloAppBar\hiloAppBar.css">
+      <PackagePath>Hilo\controls\HiloAppBar\hiloAppBar.css</PackagePath>
+      <Modified>2012-12-07T07:30:40.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\dev\git\presentations\developing-win8-js-applications\Hilo JavaScript + Tests\Hilo\Hilo\crop\crop.css">
+      <PackagePath>Hilo\crop\crop.css</PackagePath>
+      <Modified>2012-12-07T07:39:06.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\dev\git\presentations\developing-win8-js-applications\Hilo JavaScript + Tests\Hilo\Hilo\detail\detail.css">
+      <PackagePath>Hilo\detail\detail.css</PackagePath>
+      <Modified>2013-01-09T16:39:00.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\dev\git\presentations\developing-win8-js-applications\Hilo JavaScript + Tests\Hilo\Hilo\hub\hub.css">
+      <PackagePath>Hilo\hub\hub.css</PackagePath>
+      <Modified>2013-01-09T16:39:08.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\dev\git\presentations\developing-win8-js-applications\Hilo JavaScript + Tests\Hilo\Hilo\month\month.css">
+      <PackagePath>Hilo\month\month.css</PackagePath>
+      <Modified>2012-12-07T07:39:06.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\dev\git\presentations\developing-win8-js-applications\Hilo JavaScript + Tests\Hilo\Hilo\rotate\rotate.css">
+      <PackagePath>Hilo\rotate\rotate.css</PackagePath>
+      <Modified>2012-12-07T07:30:40.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\dev\git\presentations\developing-win8-js-applications\Hilo JavaScript + Tests\Hilo\default.html">
+      <PackagePath>default.html</PackagePath>
+      <Modified>2013-01-09T16:39:08.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\dev\git\presentations\developing-win8-js-applications\Hilo JavaScript + Tests\Hilo\Hilo\controls\Header\Header.html">
+      <PackagePath>Hilo\controls\Header\Header.html</PackagePath>
+      <Modified>2012-11-14T13:29:00.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\dev\git\presentations\developing-win8-js-applications\Hilo JavaScript + Tests\Hilo\Hilo\controls\HiloAppBar\hiloAppBar.html">
+      <PackagePath>Hilo\controls\HiloAppBar\hiloAppBar.html</PackagePath>
+      <Modified>2013-01-09T16:39:08.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\dev\git\presentations\developing-win8-js-applications\Hilo JavaScript + Tests\Hilo\Hilo\crop\crop.html">
+      <PackagePath>Hilo\crop\crop.html</PackagePath>
+      <Modified>2013-01-09T16:39:08.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\dev\git\presentations\developing-win8-js-applications\Hilo JavaScript + Tests\Hilo\Hilo\detail\detail.html">
+      <PackagePath>Hilo\detail\detail.html</PackagePath>
+      <Modified>2013-01-09T16:39:08.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\dev\git\presentations\developing-win8-js-applications\Hilo JavaScript + Tests\Hilo\Hilo\hub\hub.html">
+      <PackagePath>Hilo\hub\hub.html</PackagePath>
+      <Modified>2013-01-09T16:39:08.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\dev\git\presentations\developing-win8-js-applications\Hilo JavaScript + Tests\Hilo\Hilo\month\month.html">
+      <PackagePath>Hilo\month\month.html</PackagePath>
+      <Modified>2013-01-09T16:39:08.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\dev\git\presentations\developing-win8-js-applications\Hilo JavaScript + Tests\Hilo\Hilo\rotate\rotate.html">
+      <PackagePath>Hilo\rotate\rotate.html</PackagePath>
+      <Modified>2013-01-09T16:39:08.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\dev\git\presentations\developing-win8-js-applications\Hilo JavaScript + Tests\Hilo\default.js">
+      <PackagePath>default.js</PackagePath>
+      <Modified>2013-01-09T16:39:08.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\dev\git\presentations\developing-win8-js-applications\Hilo JavaScript + Tests\Hilo\Hilo\contentChangedListener.js">
+      <PackagePath>Hilo\contentChangedListener.js</PackagePath>
+      <Modified>2012-12-07T07:30:40.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\dev\git\presentations\developing-win8-js-applications\Hilo JavaScript + Tests\Hilo\Hilo\controls\Header\Header.js">
+      <PackagePath>Hilo\controls\Header\Header.js</PackagePath>
+      <Modified>2012-12-07T07:30:40.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\dev\git\presentations\developing-win8-js-applications\Hilo JavaScript + Tests\Hilo\Hilo\controls\HiloAppBar\hiloAppBarPresenter.js">
+      <PackagePath>Hilo\controls\HiloAppBar\hiloAppBarPresenter.js</PackagePath>
+      <Modified>2012-12-07T07:30:40.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\dev\git\presentations\developing-win8-js-applications\Hilo JavaScript + Tests\Hilo\Hilo\controls\HiloAppBar\hiloAppBar.js">
+      <PackagePath>Hilo\controls\HiloAppBar\hiloAppBar.js</PackagePath>
+      <Modified>2012-12-07T07:30:40.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\dev\git\presentations\developing-win8-js-applications\Hilo JavaScript + Tests\Hilo\Hilo\controls\pages.js">
+      <PackagePath>Hilo\controls\pages.js</PackagePath>
+      <Modified>2013-01-09T16:39:08.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\dev\git\presentations\developing-win8-js-applications\Hilo JavaScript + Tests\Hilo\Hilo\controls\pageControlHelper.js">
+      <PackagePath>Hilo\controls\pageControlHelper.js</PackagePath>
+      <Modified>2013-01-09T16:39:08.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\dev\git\presentations\developing-win8-js-applications\Hilo JavaScript + Tests\Hilo\Hilo\crop\crop.js">
+      <PackagePath>Hilo\crop\crop.js</PackagePath>
+      <Modified>2013-01-09T16:39:08.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\dev\git\presentations\developing-win8-js-applications\Hilo JavaScript + Tests\Hilo\Hilo\crop\cropPresenter.js">
+      <PackagePath>Hilo\crop\cropPresenter.js</PackagePath>
+      <Modified>2013-01-09T16:39:08.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\dev\git\presentations\developing-win8-js-applications\Hilo JavaScript + Tests\Hilo\Hilo\crop\appBarPresenter.js">
+      <PackagePath>Hilo\crop\appBarPresenter.js</PackagePath>
+      <Modified>2012-12-07T07:30:40.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\dev\git\presentations\developing-win8-js-applications\Hilo JavaScript + Tests\Hilo\Hilo\crop\croppedImageWriter.js">
+      <PackagePath>Hilo\crop\croppedImageWriter.js</PackagePath>
+      <Modified>2013-01-09T16:39:08.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\dev\git\presentations\developing-win8-js-applications\Hilo JavaScript + Tests\Hilo\Hilo\crop\image.js">
+      <PackagePath>Hilo\crop\image.js</PackagePath>
+      <Modified>2012-12-07T07:30:40.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\dev\git\presentations\developing-win8-js-applications\Hilo JavaScript + Tests\Hilo\Hilo\crop\imageView.js">
+      <PackagePath>Hilo\crop\imageView.js</PackagePath>
+      <Modified>2013-01-09T16:39:08.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\dev\git\presentations\developing-win8-js-applications\Hilo JavaScript + Tests\Hilo\Hilo\crop\cropSelection.js">
+      <PackagePath>Hilo\crop\cropSelection.js</PackagePath>
+      <Modified>2012-12-07T07:30:40.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\dev\git\presentations\developing-win8-js-applications\Hilo JavaScript + Tests\Hilo\Hilo\crop\cropSelectionController.js">
+      <PackagePath>Hilo\crop\cropSelectionController.js</PackagePath>
+      <Modified>2012-12-07T07:30:40.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\dev\git\presentations\developing-win8-js-applications\Hilo JavaScript + Tests\Hilo\Hilo\crop\cropSelectionCorner.js">
+      <PackagePath>Hilo\crop\cropSelectionCorner.js</PackagePath>
+      <Modified>2012-12-07T07:30:40.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\dev\git\presentations\developing-win8-js-applications\Hilo JavaScript + Tests\Hilo\Hilo\crop\cropSelectionView.js">
+      <PackagePath>Hilo\crop\cropSelectionView.js</PackagePath>
+      <Modified>2012-12-07T07:30:40.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\dev\git\presentations\developing-win8-js-applications\Hilo JavaScript + Tests\Hilo\Hilo\dateFormatter.js">
+      <PackagePath>Hilo\dateFormatter.js</PackagePath>
+      <Modified>2012-12-07T07:30:40.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\dev\git\presentations\developing-win8-js-applications\Hilo JavaScript + Tests\Hilo\Hilo\detail\detail.js">
+      <PackagePath>Hilo\detail\detail.js</PackagePath>
+      <Modified>2013-01-09T16:39:08.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\dev\git\presentations\developing-win8-js-applications\Hilo JavaScript + Tests\Hilo\Hilo\detail\detailPresenter.js">
+      <PackagePath>Hilo\detail\detailPresenter.js</PackagePath>
+      <Modified>2013-01-09T16:39:08.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\dev\git\presentations\developing-win8-js-applications\Hilo JavaScript + Tests\Hilo\Hilo\detail\filmstripPresenter.js">
+      <PackagePath>Hilo\detail\filmstripPresenter.js</PackagePath>
+      <Modified>2012-12-07T07:30:40.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\dev\git\presentations\developing-win8-js-applications\Hilo JavaScript + Tests\Hilo\Hilo\detail\flipviewPresenter.js">
+      <PackagePath>Hilo\detail\flipviewPresenter.js</PackagePath>
+      <Modified>2013-01-09T16:39:08.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\dev\git\presentations\developing-win8-js-applications\Hilo JavaScript + Tests\Hilo\Hilo\exifHelpers.js">
+      <PackagePath>Hilo\exifHelpers.js</PackagePath>
+      <Modified>2012-12-07T07:30:40.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\dev\git\presentations\developing-win8-js-applications\Hilo JavaScript + Tests\Hilo\Hilo\hub\hub.js">
+      <PackagePath>Hilo\hub\hub.js</PackagePath>
+      <Modified>2013-01-09T16:39:08.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\dev\git\presentations\developing-win8-js-applications\Hilo JavaScript + Tests\Hilo\Hilo\hub\hubPresenter.js">
+      <PackagePath>Hilo\hub\hubPresenter.js</PackagePath>
+      <Modified>2013-01-09T16:39:08.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\dev\git\presentations\developing-win8-js-applications\Hilo JavaScript + Tests\Hilo\Hilo\hub\listViewPresenter.js">
+      <PackagePath>Hilo\hub\listViewPresenter.js</PackagePath>
+      <Modified>2013-01-09T16:39:08.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\dev\git\presentations\developing-win8-js-applications\Hilo JavaScript + Tests\Hilo\Hilo\imageQueryBuilder.js">
+      <PackagePath>Hilo\imageQueryBuilder.js</PackagePath>
+      <Modified>2013-01-09T16:39:08.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\dev\git\presentations\developing-win8-js-applications\Hilo JavaScript + Tests\Hilo\Hilo\imageWriter.js">
+      <PackagePath>Hilo\imageWriter.js</PackagePath>
+      <Modified>2013-01-09T16:39:08.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\dev\git\presentations\developing-win8-js-applications\Hilo JavaScript + Tests\Hilo\Hilo\month\monthPresenter.js">
+      <PackagePath>Hilo\month\monthPresenter.js</PackagePath>
+      <Modified>2013-01-09T16:39:08.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\dev\git\presentations\developing-win8-js-applications\Hilo JavaScript + Tests\Hilo\Hilo\month\month.js">
+      <PackagePath>Hilo\month\month.js</PackagePath>
+      <Modified>2013-01-09T16:39:08.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\dev\git\presentations\developing-win8-js-applications\Hilo JavaScript + Tests\Hilo\Hilo\month\yearList.js">
+      <PackagePath>Hilo\month\yearList.js</PackagePath>
+      <Modified>2013-01-09T16:39:08.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\dev\git\presentations\developing-win8-js-applications\Hilo JavaScript + Tests\Hilo\Hilo\PageControlNavigator.js">
+      <PackagePath>Hilo\PageControlNavigator.js</PackagePath>
+      <Modified>2013-01-09T16:39:08.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\dev\git\presentations\developing-win8-js-applications\Hilo JavaScript + Tests\Hilo\Hilo\Picture.js">
+      <PackagePath>Hilo\Picture.js</PackagePath>
+      <Modified>2013-01-09T16:39:08.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\dev\git\presentations\developing-win8-js-applications\Hilo JavaScript + Tests\Hilo\Hilo\rotate\TouchProvider.js">
+      <PackagePath>Hilo\rotate\TouchProvider.js</PackagePath>
+      <Modified>2013-01-09T16:39:08.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\dev\git\presentations\developing-win8-js-applications\Hilo JavaScript + Tests\Hilo\Hilo\rotate\appBarPresenter.js">
+      <PackagePath>Hilo\rotate\appBarPresenter.js</PackagePath>
+      <Modified>2012-12-07T07:30:40.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\dev\git\presentations\developing-win8-js-applications\Hilo JavaScript + Tests\Hilo\Hilo\rotate\rotate.js">
+      <PackagePath>Hilo\rotate\rotate.js</PackagePath>
+      <Modified>2013-01-09T16:39:08.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\dev\git\presentations\developing-win8-js-applications\Hilo JavaScript + Tests\Hilo\Hilo\rotate\rotatePresenter.js">
+      <PackagePath>Hilo\rotate\rotatePresenter.js</PackagePath>
+      <Modified>2013-01-09T16:39:08.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\dev\git\presentations\developing-win8-js-applications\Hilo JavaScript + Tests\Hilo\Hilo\rotate\rotatedImageWriter.js">
+      <PackagePath>Hilo\rotate\rotatedImageWriter.js</PackagePath>
+      <Modified>2012-12-07T07:30:40.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\dev\git\presentations\developing-win8-js-applications\Hilo JavaScript + Tests\Hilo\Hilo\Tiles\createTileFriendlyImages.js">
+      <PackagePath>Hilo\Tiles\createTileFriendlyImages.js</PackagePath>
+      <Modified>2013-01-09T16:39:08.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\dev\git\presentations\developing-win8-js-applications\Hilo JavaScript + Tests\Hilo\Hilo\Tiles\populateTemplate.js">
+      <PackagePath>Hilo\Tiles\populateTemplate.js</PackagePath>
+      <Modified>2013-01-09T16:39:08.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\dev\git\presentations\developing-win8-js-applications\Hilo JavaScript + Tests\Hilo\Hilo\Tiles\TileUpdater.js">
+      <PackagePath>Hilo\Tiles\TileUpdater.js</PackagePath>
+      <Modified>2013-01-09T16:39:08.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\dev\git\presentations\developing-win8-js-applications\Hilo JavaScript + Tests\Hilo\Hilo\Tiles\createTileUpdates.js">
+      <PackagePath>Hilo\Tiles\createTileUpdates.js</PackagePath>
+      <Modified>2013-01-09T16:39:08.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\dev\git\presentations\developing-win8-js-applications\Hilo JavaScript + Tests\Hilo\Hilo\bindFunctionsTo.js">
+      <PackagePath>Hilo\bindFunctionsTo.js</PackagePath>
+      <Modified>2012-12-07T07:30:40.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\dev\git\presentations\developing-win8-js-applications\Hilo JavaScript + Tests\Hilo\Hilo\urlCache.js">
+      <PackagePath>Hilo\urlCache.js</PackagePath>
+      <Modified>2012-12-07T07:30:40.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\dev\git\presentations\developing-win8-js-applications\Hilo JavaScript + Tests\Hilo\images\HiloLogo.scale-100.png">
+      <PackagePath>images\HiloLogo.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2012-12-07T07:30:40.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\dev\git\presentations\developing-win8-js-applications\Hilo JavaScript + Tests\Hilo\images\HiloLogo.scale-80.png">
+      <PackagePath>images\HiloLogo.scale-80.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2012-12-07T07:30:40.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\dev\git\presentations\developing-win8-js-applications\Hilo JavaScript + Tests\Hilo\images\HiloSmallLogo.scale-100.png">
+      <PackagePath>images\HiloSmallLogo.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2012-12-07T07:30:40.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\dev\git\presentations\developing-win8-js-applications\Hilo JavaScript + Tests\Hilo\images\HiloSmallLogo.scale-80.png">
+      <PackagePath>images\HiloSmallLogo.scale-80.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2012-12-07T07:30:40.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\dev\git\presentations\developing-win8-js-applications\Hilo JavaScript + Tests\Hilo\images\HiloSplash.scale-100.png">
+      <PackagePath>images\HiloSplash.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2012-12-07T07:30:40.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\dev\git\presentations\developing-win8-js-applications\Hilo JavaScript + Tests\Hilo\images\HiloSplash.scale-100_contrast-black.png">
+      <PackagePath>images\HiloSplash.scale-100_contrast-black.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2012-12-07T07:30:40.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\dev\git\presentations\developing-win8-js-applications\Hilo JavaScript + Tests\Hilo\images\HiloSplash.scale-100_contrast-white.png">
+      <PackagePath>images\HiloSplash.scale-100_contrast-white.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2012-12-07T07:30:40.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\dev\git\presentations\developing-win8-js-applications\Hilo JavaScript + Tests\Hilo\images\HiloSplash.scale-140.png">
+      <PackagePath>images\HiloSplash.scale-140.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2012-12-07T07:30:40.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\dev\git\presentations\developing-win8-js-applications\Hilo JavaScript + Tests\Hilo\images\HiloSplash.scale-180.png">
+      <PackagePath>images\HiloSplash.scale-180.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2012-12-07T07:30:40.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\dev\git\presentations\developing-win8-js-applications\Hilo JavaScript + Tests\Hilo\images\HiloStoreLogo.scale-100.png">
+      <PackagePath>images\HiloStoreLogo.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2012-12-07T07:30:40.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\dev\git\presentations\developing-win8-js-applications\Hilo JavaScript + Tests\Hilo\images\HiloStoreLogo.scale-100_contrast-black.png">
+      <PackagePath>images\HiloStoreLogo.scale-100_contrast-black.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2012-12-07T07:30:40.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\dev\git\presentations\developing-win8-js-applications\Hilo JavaScript + Tests\Hilo\images\HiloStoreLogo.scale-100_contrast-white.png">
+      <PackagePath>images\HiloStoreLogo.scale-100_contrast-white.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2012-12-07T07:30:40.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\dev\git\presentations\developing-win8-js-applications\Hilo JavaScript + Tests\Hilo\images\HiloStoreLogo.scale-140.png">
+      <PackagePath>images\HiloStoreLogo.scale-140.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2012-12-07T07:30:40.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\dev\git\presentations\developing-win8-js-applications\Hilo JavaScript + Tests\Hilo\images\HiloStoreLogo.scale-180.png">
+      <PackagePath>images\HiloStoreLogo.scale-180.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2012-12-07T07:30:40.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\dev\git\presentations\developing-win8-js-applications\Hilo JavaScript + Tests\Hilo\images\HiloWideLogo.scale-100.png">
+      <PackagePath>images\HiloWideLogo.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2012-12-07T07:30:40.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\dev\git\presentations\developing-win8-js-applications\Hilo JavaScript + Tests\Hilo\images\HiloWideLogo.scale-80.png">
+      <PackagePath>images\HiloWideLogo.scale-80.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2012-12-07T07:30:40.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\dev\git\presentations\developing-win8-js-applications\Hilo JavaScript + Tests\Hilo\readme.txt">
+      <PackagePath>readme.txt</PackagePath>
+      <Modified>2012-12-07T07:30:40.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\dev\git\presentations\developing-win8-js-applications\Hilo JavaScript + Tests\Hilo\bin\Debug\resources.pri">
+      <PackagePath>resources.pri</PackagePath>
+      <Modified>2013-02-21T15:58:02.743</Modified>
+    </AppxPackagedFile>
+  </ItemGroup>
+  <ItemGroup>
+    <ResolvedSDKReference Include="C:\Program Files %28x86%29\Microsoft SDKs\Windows\v8.0\ExtensionSDKs\Microsoft.WinJS.1.0\1.0\">
+      <Name>Microsoft.WinJS.1.0</Name>
+      <Version>1.0.9200.20512</Version>
+      <Architecture>Neutral</Architecture>
+      <FrameworkIdentity>Name=Microsoft.WinJS.1.0, MinVersion=1.0.9200.20512</FrameworkIdentity>
+      <AppxLocation>C:\Program Files %28x86%29\Microsoft SDKs\Windows\v8.0\ExtensionSDKs\Microsoft.WinJS.1.0\1.0\Microsoft.WinJS.1.0.appx</AppxLocation>
+    </ResolvedSDKReference>
+  </ItemGroup>
+</Project>

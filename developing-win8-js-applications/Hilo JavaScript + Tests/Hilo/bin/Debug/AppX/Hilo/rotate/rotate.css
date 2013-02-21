@@ -1,0 +1,39 @@
+﻿.rotate p {
+    margin-left: 120px;
+}
+
+.rotatable {
+    transition-property: top, height, width, max-height, max-width, transform;
+    transition-duration: 1s;
+    transition-delay: 0s;
+}
+
+.content-wrapper {
+    width: 100%;
+    height: 100%;
+    display: -ms-grid;
+    -ms-grid-columns: 1fr;
+    -ms-grid-rows: 1fr 200px;
+}
+
+#rotate-header {
+    display: none;
+}
+
+#rotate-image {
+    display: block !important;
+    -ms-grid-row-align: center;
+    -ms-grid-column-align: center;
+}
+
+@media screen and (-ms-view-state: snapped) {
+    #rotate-header {
+        display: -ms-grid;
+    }
+
+    #rotate-image {
+        max-height: none;
+        max-width: 289px;
+        height: auto;
+    }
+}
