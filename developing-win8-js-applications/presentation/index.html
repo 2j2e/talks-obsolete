@@ -1,0 +1,742 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>Roslyn Compiler as a Service</title>
+
+		<meta name="description" content="A framework for easily creating beautiful presentations using HTML">
+		<meta name="author" content="Hakim El Hattab">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<link rel="stylesheet" href="css/reveal.min.css">
+		<link rel="stylesheet" href="css/theme/beige.css" id="theme">
+
+		<!-- For syntax highlighting -->
+		<link rel="stylesheet" href="lib/css/sunburst.css">
+
+		<!-- If the query includes 'print-pdf', use the PDF print sheet -->
+		<script>
+			document.write( '<link rel="stylesheet" href="css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );-->
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+
+
+		<style type="text/css">
+			code.custom{
+				font-size: 20pt;
+				font-weight: bold;
+			}
+			span.select {
+				color: violet;
+				font-weight: bold;
+			}
+			span.author {
+				color: #97CF00;
+			}
+			span.kw{
+				font-weight: bold;
+				color: #2d49ba;
+			}
+			p.file {
+				font-style: italic;
+				font-size: .5em;
+				text-align: left;
+				padding-left: 2em;
+				color: gray;
+			}
+			pre code {
+				font-family: Consolas !important;
+			}
+		</style>
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<div class="slides">
+
+				<section>
+					<h2>Creating Windows Store JavaScript Apps</h2>
+					<br/><br/><br/>
+					<p>revealed by <span class="author">Eugene Zharkov</a> / <a href="http://twitter.com/2j2e">@2j2e</a></p>
+				</section>
+
+				<section>
+					<h3>Prototype</h3>
+					<img src="images/prototype.png" />
+					<p>Check <a href="http://msdn.microsoft.com/en-us/library/windows/apps/hh465424.aspx">official UX guidlines</a></p>
+				</section>
+
+				<section>
+					<h3>App flow</h3>
+					<p>Do not forget about:</p>
+					<ul>
+						<li>Form factors</li>
+						<li class="fragment roll-in">App contracts</li>
+						<li class="fragment roll-in">All type of the tiles</li>
+						<li class="fragment roll-in">Toast notifications</li>
+						<li class="fragment roll-in">Touch first</li>
+						<li class="fragment roll-in">Animations</li>
+					</ul>
+				</section>
+
+				<section>
+					<h3>Async patterns</h3>
+					<p>You should understand how:</p>
+					<ul>
+						<li>to compose asynchronous code</li>
+						<li>to use promises</li>
+						<li>to chain and group promises</li>
+						<li>to code promise chains to avoid nesting</li>
+						<li>to wrap non-promise values in a promise</li>
+						<li>to handle errors in a promise</li>
+					</ul>					
+				</section>
+				
+				<section>
+
+					<section>
+						<h3>Promises</h3>				
+						<p>A promise is an object that represent a value that will be available later.</p>
+						<hr />
+						<p>Most API's are wraped to the promises.</p>
+						<hr />
+						<p>All based on two methods <span class="kw">.then</span> and <span class="kw">.done</span>.</p>
+					</section>
+
+					<section>
+						<h3>Promises</h3>
+						<p>A promise is an object that represent a value that will be available later.</p>
+						<p class="file">Hilo\Hilo\imageQueryBuilder.js</p>
+						<pre><code class="javascript">if (this.settings.bindable) {
+// Create `Hilo.Picture` objects instead of returning `StorageFile` objects
+    queryPromise = queryPromise.then(this._createViewModels);
+}</code></pre>					
+					</section>
+
+					<section>
+						<h3>Promise Chain</h3>
+						<pre><code class="javascript">var whenImagesForTileRetrieved = queryBuilder.build(picturesLibrary).execute();
+whenImagesForTileRetrieved
+	.then(Hilo.Tiles.createTileFriendlyImages)
+	.then(this.getLocalImagePaths)
+	.then(Hilo.Tiles.createTileUpdates)
+	.then(queueTileUpdates);</code></pre>
+					</section>
+
+					<section>
+						<h3>Promise Chain</h3>
+						<img src="images/promise-chain.png" />
+					</section>
+
+					<section>
+						<h3>Bind function</h3>
+						<p>Define funtion environment with <span class="kw">.bind</span></p>
+						<p class="file">Hilo\Hilo\Tiles\TileUpdater.js</p>
+						<pre><code class="javascript">var queueTileUpdates = this.queueTileUpdates.bind(this);
+
+queueTileUpdates: function (notifications) {
+	var self = this;
+	notifications.forEach(function (notification) {
+		self.tileUpdater.update(notification);
+	});
+},</code></pre>
+					</section>
+
+
+					<section>
+						<h3>Bind Function</h3>
+						<p>Bind can receive additional parameters.</p>
+						<p class="file">Hilo\Hilo\Tiles\createTileFriendlyImages.js</p>
+						<pre><code class="javascript">function createTileFriendlyImages(files) {
+	var localFolder = applicationData.current.localFolder;
+
+	var copyThumbnailsToFolder = copyFilesToFolder.bind(null, files);
+
+	var whenFolderCreated = localFolder.createFolderAsync(thumbnailFolderName, creationCollisionOption.replaceExisting);
+
+	return whenFolderCreated
+		.then(copyThumbnailsToFolder);
+}</code></pre>
+					</section>
+
+					<section>
+						<h3>Grouping a promise</h3>
+						<p>When you have non-sequential, asynchronous operations that must all complete before you can continue a task, you can use the <span class="kw">WinJS.Promise.join</span></p>
+						<pre><code class="javascript">var whenFileIsOpen = targetFile.openAsync(fileAccessMode.readWrite);
+var whenThumbailIsReady = sourceFile.getThumbnailAsync(thumbnailMode.singleItem);
+var whenEverythingIsReady = WinJS.Promise.join({ opened: whenFileIsOpen, ready: whenThumbailIsReady });</code></pre>
+					</section>
+
+					<section>
+						<h3>Handling errors</h3>
+						<p>Use <span class="kw">.done</span> at the end of method chain.</p>
+						<hr/>
+						<p>It doesn't return another promise and throw unhandled expetions.</p>
+					</section>
+					
+					<section>
+						<h3>Handling errors</h3>
+						<p class="file">Hilo\Hilo\crop\croppedImageWriter.js</p>
+						<pre><code class="javascript">var decoderPromise = getOrientation
+.then(function (retrievedProps) {
+	exifOrientation = (retrievedProps.size !== 0)
+		? retrievedProps["System.Photo.Orientation"]
+		: photoOrientation.normal;
+
+}, function (error) {
+	switch (error.number) {
+		case Hilo.ImageWriter.WINCODEC_ERR_UNSUPPORTEDOPERATION:
+		case Hilo.ImageWriter.WINCODEC_ERR_PROPERTYNOTSUPPORTED:
+			exifOrientation = photoOrientation.normal;
+			break;
+		default:
+			throw error;
+	}
+});</code></pre>
+					</section>
+				</section>
+
+				<section>
+					<section>
+						<h3>MVP</h3>
+						<ul>
+							<li>The model represents the state and operations of business objects that your app manipulates</li>
+							<li>The view (HTML and CSS) defines the structure, layout, and appearance of what the user sees on the screen. The view manages the controls on the page and forwards user events to a presenter class</li>
+							<li>The presenter contains the logic to respond to events, update the model and, in turn, manipulate the state of the view</li>
+						</ul>					
+					</section>
+
+					<section>
+						<h3>MVP - View</h3>
+						<p class="file">Hilo\Hilo\hub\hub.html</p>
+						<pre><code class="xml">&lt;div id="hub-image-template" data-win-control="WinJS.Binding.Template"&gt;
+    &lt;div data-win-bind="style.backgroundImage: url.backgroundUrl; alt: name; className: className" class="thumbnail"&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+					</section>
+
+					<section>
+						<h3>MVP - Presenter Test</h3>
+						<p class="file">Hilo\Hilo.Specfications\specs\hub\ListViewPresenter.spec.js</p>
+						<pre><code class="javascript">describe("when snapped", function () {
+    var el;
+
+    beforeEach(function () {
+        var appView = {};
+        el = new Specs.WinControlStub();
+        el.winControl.addEventListener = function () { };
+
+        var listviewPresenter = new Hilo.Hub.ListViewPresenter(el, appView);
+        listviewPresenter.setViewState(Windows.UI.ViewManagement.ApplicationViewState.snapped);
+    });
+
+    it("the ListView should use a ListLayout", function () {
+        expect(el.winControl.layout instanceof WinJS.UI.ListLayout).equal(true);
+    });
+
+});</code></pre>
+					</section>
+					
+					<section>
+						<h3>Presenters</h3>
+						<p>Each presenter is responsible for a specific part of the page (a control)</p>
+						<hr/>
+						<p>One page-specific presenter (the mediator) coordinates the other presenters (control-specific) and receives forwarded events</p>
+						<img src="images/mediator.png" style="width: 50%" />
+					</section>
+					
+					<section>
+						<h3>Presenters</h3>
+						<p class="file">Hilo\Hilo\detail\detail.js</p>
+						<pre><code class="javascript">ready: function (element, options) {
+
+    var query = options.query;
+    var queryDate = query.settings.monthAndYear;
+    var pageTitle = Hilo.dateFormatter.getMonthFrom(queryDate) + " " + Hilo.dateFormatter.getYearFrom(queryDate);
+    this.bindPageTitle(pageTitle);
+
+    var hiloAppBarEl = document.querySelector("#appbar");
+    var hiloAppBar = new Hilo.Controls.HiloAppBar.HiloAppBarPresenter(hiloAppBarEl, WinJS.Navigation, query);
+
+    var filmstripEl = document.querySelector("#filmstrip");
+    var flipviewEl = document.querySelector("#flipview");
+
+    var flipviewPresenter = new Hilo.Detail.FlipviewPresenter(flipviewEl);
+    var filmstripPresenter = new Hilo.Detail.FilmstripPresenter(filmstripEl);
+
+
+    var detailPresenter = new Hilo.Detail.DetailPresenter(filmstripPresenter, flipviewPresenter, hiloAppBar, WinJS.Navigation);
+    detailPresenter.addEventListener("pageSelected", function (args) {
+        var itemIndex = args.detail.itemIndex;
+        options.itemIndex = itemIndex;
+    });
+
+    detailPresenter
+        .start(options)
+        .then(function () {
+            WinJS.Application.addEventListener("Hilo:ContentsChanged", Hilo.navigator.reload);
+        });
+},</code></pre>
+					</section>
+					
+					<section>
+						<h3>Separating responsibilities</h3>
+						<p class="file">Hilo\Hilo\hub\hub.html</p>
+						<pre><code class="xml">&lt;section id="image-nav" data-win-control="WinJS.UI.HtmlControl" data-win-options="{uri: &#39;/Hilo/controls/HiloAppBar/hiloAppBar.html&#39;}"&gt;&lt;/section&gt;</code></pre>
+						<p class="file">Hilo\Hilo\controls\HiloAppBar\hiloAppBar.html</p>
+						<pre><code class="xml">&lt;div id="appbar" data-win-control="WinJS.UI.AppBar" data-win-options="{sticky: false}"&gt;
+    &lt;button
+        data-win-control="WinJS.UI.AppBarCommand"
+        data-win-options="{id:&#39;rotate&#39;, icon:&#39;rotate&#39;, section: &#39;selection&#39;, disabled: true}"
+        data-win-bind="{disabled: isCorrupt}"
+        data-win-res="{winControl: {label:&#39;RotateAppBarButton.Name&#39;}}"&gt;
+    &lt;/button&gt;
+    &lt;button
+        data-win-control="WinJS.UI.AppBarCommand"
+        data-win-options="{id:&#39;crop&#39;, icon:&#39;crop&#39;, section: &#39;selection&#39;, disabled: true}"
+        data-win-bind="{disabled: isCorrupt}"
+        data-win-res="{winControl: {label:&#39;CropAppBarButton.Name&#39;}}"&gt;
+    &lt;/button&gt;
+&lt;/div&gt;</code></pre>
+</code></pre>
+					</section>
+					
+				</section>
+
+				<section>
+					<section>
+						<h3>Updating tiles</h3>
+						<p class="file">Hilo\default.js</p>
+						<pre><code class="javascript">if (currentState.kind === activation.ActivationKind.launch) {
+
+    if (currentState.previousExecutionState !== activation.ApplicationExecutionState.terminated) {
+
+        // When the app is started, we want to update its tile
+        // on the start screen. Since this API is not accessible 
+        // inside of Blend, we only invoke it when we are not in
+        // design mode.
+        if (!Windows.ApplicationModel.DesignMode.designModeEnabled) {
+            var tileUpdater = new Hilo.Tiles.TileUpdater();
+            tileUpdater.update();
+        }
+}</code></pre>					
+					</section>
+					
+					<section>
+						<h3>Updating tiles</h3>
+						<p class="file">Hilo\Hilo\Tiles\TileUpdater.js</p>
+						<pre><code class="javascript">update: function () {
+    // Bind the function to a context, so that `this` will be resolved
+    // when it is invoked in the promise.
+    var queueTileUpdates = this.queueTileUpdates.bind(this);
+
+    // Build a query to get the number of images needed for the tiles.
+    var queryBuilder = new Hilo.ImageQueryBuilder();
+    queryBuilder.count(numberOfImagesToRetrieve);
+
+    var whenImagesForTileRetrieved = queryBuilder.build(picturesLibrary).execute();
+    whenImagesForTileRetrieved
+        .then(Hilo.Tiles.createTileFriendlyImages)
+        .then(this.getLocalImagePaths)
+        .then(Hilo.Tiles.createTileUpdates)
+        .then(queueTileUpdates);
+}</code></pre>					
+					</section>
+					
+					<section>
+						<h3>Updating tiles</h3>
+						<p>The XML for a typical tile notification</p>
+						<pre><code class="xml">&lt;tile&gt;
+  &lt;visual&gt;
+    &lt;binding template="TileWideImageCollection"&gt;
+      &lt;image id="1" src="ms-appdata:///local/thumbnails/thumbImage_0.jpg"/&gt;
+      &lt;image id="2" src="ms-appdata:///local/thumbnails/thumbImage_1.jpg"/&gt;
+      &lt;image id="3" src="ms-appdata:///local/thumbnails/thumbImage_2.jpg"/&gt;
+      &lt;image id="4" src="ms-appdata:///local/thumbnails/thumbImage_3.jpg"/&gt;
+      &lt;image id="5" src="ms-appdata:///local/thumbnails/thumbImage_4.jpg"/&gt;
+    &lt;/binding&gt;
+  &lt;binding template="TileSquareImage"&gt;
+      &lt;image id="1" src="ms-appdata:///local/thumbnails/thumbImage_0.jpg"/&gt;
+    &lt;/binding&gt;
+  &lt;/visual&gt;
+&lt;/tile&gt;</code></pre>					
+					</section>
+				</section>
+				
+				<section>
+					<section>
+						<h3>Page Navigation</h3>
+						<p class="file">Hilo\Default.html</p>
+						<pre><code class="xml">&lt;div id="contenthost" data-win-control="Hilo.PageControlNavigator" data-win-options="{home: &#39;/Hilo/hub/hub.html&#39;}"&gt;
+&lt;/div&gt;</code></pre>
+						<p class="file">Hilo\Hilo\hub\hubPresenter.js</p>
+						<pre><code class="javascript">itemClicked: function (args) {
+
+    // Get the `Hilo.Picture` item that was bound to the invoked image,
+    // and the item index from the list view control.
+    var picture = args.detail.item.data;
+
+    // Build the query that can find this picture within it's month group.
+    var options = this.buildQueryForPicture(picture);
+
+    // Navigate to the detail view, specifying the month query to
+    // show, and the index of the individual item that was invoked.
+    this.nav.navigate("/Hilo/detail/detail.html", options);
+},</code></pre>
+					</section>
+					
+					<section>
+						<h3>Creating pages</h3>
+						<p class="file">Hilo\Hilo\hub\hub.js</p>
+						<pre><code class="javascript">Hilo.controls.pages.define("hub", {
+
+    ready: function (element, options) {
+
+        // Handle the app bar button clicks for showing and hiding the app bar.
+        var appBarEl = document.querySelector("#appbar");
+        var hiloAppBar = new Hilo.Controls.HiloAppBar.HiloAppBarPresenter(appBarEl, WinJS.Navigation);
+
+        // Handle selecting and invoking (clicking) images.
+        var listViewEl = document.querySelector("#picturesLibrary");
+        this.listViewPresenter = new Hilo.Hub.ListViewPresenter(listViewEl, Windows.UI.ViewManagement.ApplicationView);
+
+        // Coordinate the parts of the hub page.
+        this.hubViewPresenter = new Hilo.Hub.HubViewPresenter(
+            WinJS.Navigation,
+            hiloAppBar,
+            this.listViewPresenter,
+            new Hilo.ImageQueryBuilder()
+        );
+
+        this.hubViewPresenter
+            .start(knownFolders.picturesLibrary)
+            .then(function () {
+                WinJS.Application.addEventListener("Hilo:ContentsChanged", Hilo.navigator.reload);
+            });
+    },
+
+    updateLayout: function (element, viewState, lastViewState) {
+        this.listViewPresenter.setViewState(viewState, lastViewState);
+    },
+
+    unload: function () {
+        WinJS.Application.addEventListener("Hilo:ContentsChanged", Hilo.navigator.reload);
+        Hilo.UrlCache.clearAll();
+        this.hubViewPresenter.dispose();
+        this.hubViewPresenter = null;
+    }
+});</code></pre>
+					</section>
+					
+					<section>
+						<h3>Supporting different layouts</h3>
+						<p class="file">Hilo\Hilo\PageControlNavigator.js</p>
+						<pre><code class="javascript"> function PageControlNavigator(element, options) {
+
+        // . . .
+
+        window.onresize = this._resized.bind(this);
+
+        // . . .
+    },
+	
+_resized: function (args) {
+    if (this.pageControl && this.pageControl.updateLayout) {
+        this.pageControl.updateLayout.call(this.pageControl, this.pageElement, appView.value, this._lastViewstate);
+    }
+    this._lastViewstate = appView.value;
+},</code></pre>
+					</section>
+					
+					<section>
+						<h3>Supporting different layouts</h3>
+						<p class="file">Hilo\Hilo\hub\hub.js</p>
+						<pre><code class="javascript">updateLayout: function (element, viewState, lastViewState) {
+    this.listViewPresenter.setViewState(viewState, lastViewState);
+},</code></pre>
+<p class="file">Hilo\Hilo\hub\listViewPresenter.js</p>
+						<pre><code class="javascript">setViewState: function (viewState) {
+    this.lv.layout = this.selectLayout(viewState);
+},
+
+selectLayout: function (viewState, lastViewState) {
+
+    if (lastViewState === viewState) { return; }
+
+    if (viewState === appViewState.snapped) {
+        return new WinJS.UI.ListLayout();
+    }
+    else {
+        var layout = new WinJS.UI.GridLayout();
+        layout.groupInfo = function () { return listViewLayoutSettings; };
+        layout.maxRows = 3;
+        return layout;
+    }
+},</code></pre>
+					</section>
+				
+				</section>
+				
+				<section>
+					<section>
+						<h3>Data Binding</h3>
+						<p>Templates for group items and group headers in the normal view.</p>
+						<p class="file">Hilo\Hilo\month\month.html</p>
+						<pre><code class="xml">&lt;div id="monthItemTemplate" data-win-control="WinJS.Binding.Template"&gt;
+    &lt;div data-win-bind="style.backgroundImage: url.backgroundUrl; className: className"&gt;&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div id="monthGroupHeaderTemplate" data-win-control="WinJS.Binding.Template"&gt;
+    &lt;a class="monthLink" href="#"&gt;&lt;span data-win-bind="innerHTML: title"&gt;&lt;/span&gt; (&lt;span data-win-bind="innerText: count"&gt;&lt;/span&gt;)&lt;/a&gt;
+&lt;/div&gt;
+
+&lt;div id="monthSnappedTemplate" data-win-control="WinJS.Binding.Template"&gt;
+    &lt;span data-win-bind="innerHTML: title"&gt;&lt;/span&gt; (&lt;span data-win-bind="innerText: count"&gt;&lt;/span&gt;)
+    &lt;div data-win-bind="style.backgroundImage: backgroundUrl;" class="thumbnail"&gt;&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+					</section>
+					
+					<section>
+						<h3>Data Source Types</h3>
+						<ul>
+							<li><span class="kw">WinJS.Binding.List</span> - synchronous data source, in-memory data source (an array), all its data must be available for display</li>
+							<li><span class="kw">StorageDataSource</span> - built-in support for the Windows file system</li>
+							<li><span class="kw">VirtualizedDataSource</span> - custom implementation</li>					
+					</section>
+					
+					
+				</section>
+				
+				<section>
+					<section>
+						<h3>UX</h3>
+						<p>You should provide both pointer and touch experience to your user.</p>
+						<p>The pointer is an old school, touch control requires some skills from developer.</p>
+					</section>
+					
+					<section>
+						<h3>Object Rotation</h3>
+						<p class="file">Hilo\Hilo\rotate\TouchProvider.js</p>
+						<pre><code class="javascript">function TouchProviderConstructor(inputElement) {
+
+    var recognizer = new Windows.UI.Input.GestureRecognizer();
+    recognizer.gestureSettings = Windows.UI.Input.GestureSettings.manipulationRotate;
+	
+    inputElement.addEventListener("MSPointerDown", function (evt) {
+        var pp = evt.currentPoint;
+        if (pp.pointerDevice.pointerDeviceType === pointerDeviceType.touch) {
+            recognizer.processDownEvent(pp);
+        }
+    }, false);
+
+    inputElement.addEventListener("MSPointerMove", function (evt) {
+        var pps = evt.intermediatePoints;
+        if (pps[0] && pps[0].pointerDevice.pointerDeviceType === pointerDeviceType.touch) {
+            recognizer.processMoveEvents(pps);
+        }
+    }, false);
+
+    inputElement.addEventListener("MSPointerUp", function (evt) {
+        var pp = evt.currentPoint;
+        if (pp.pointerDevice.pointerDeviceType === pointerDeviceType.touch) {
+            recognizer.processUpEvent(pp);
+        }
+    }, false);
+	
+	recognizer.addEventListener("manipulationupdated", this._manipulationUpdated);
+    recognizer.addEventListener("manipulationcompleted", this._manipulationCompleted);
+
+},
+						</code></pre>
+					</section>
+				</section>
+				
+				<section>
+					<section>
+						<h3>Performance Tips</h3>
+						<ul>
+							<li>Limit the start time</li>
+							<li class="fragment roll-in">Emphasize responsiveness</li>
+							<li class="fragment roll-in">Use thumbnails for quick rendering</li>
+							<li class="fragment roll-in">Retrieve thumbnails when accessing items</li>
+							<li class="fragment roll-in">Release media and stream resources when they're no longer needed</li>
+							<li class="fragment roll-in">Optimize ListView performance</li>
+							<li class="fragment roll-in">Keep DOM interactions to a minimum</li>
+							<li class="fragment roll-in">Optimize property access</li>
+							<li class="fragment roll-in">Use independent animations</li>
+							<li class="fragment roll-in">Manage layout efficiently</li>
+							<li class="fragment roll-in">Store state efficiently</li>
+							<li class="fragment roll-in">Keep your app’s memory usage low when it's suspended</li>
+							<li class="fragment roll-in">Minimize the amount of resources that your app uses</li>
+						</ul>
+					</section>
+					
+					<section>
+						<h3>In depth</h3>
+						<p><a href="http://msdn.microsoft.com/en-us/library/windows/apps/hh849088.aspx">Bytecode caching</a> is a technique in which the system creates bytecode for each JavaScript file once, rather than re-creating the bytecode each time it starts the app (30% improvment in large apps).</p>
+						<hr/>
+						<p>Avoid synchronous API calls. Break proccessing operations into series of smaller operations.</p>
+					</section>
+					
+					<section>
+						<h3>In depth</h3>
+						<p>Use Windows Runtime thumbnail APIs to cache and show thumbnails.</p>
+						<hr/>
+						<p>Use DOM objects only to store information that directly affects how the DOM lays out or draws elements.</p>
+						<hr/>
+						<p>Certain types of animations are offloaded from the UI thread to GPU-accelerated system thread.</p>
+					</section>
+					
+					<section>
+						<h3>In depth</h3>
+						<p>Combine API calls to reduce the number of layout passes.</p>
+						<hr/>
+						<p>Store session data in the <span class="kw">sessionState</span> in-memory object.</p>
+						<hr/>
+						<p>When your app begins the suspension process, it should free any large objects that can be easily rebuilt when it resumes.</p>
+					</section>
+					
+				</section>
+				
+				
+				<section>
+					<section>
+						<h3>Ways to test your app</h3>
+						<ul>
+							<li>Unit testing</li>
+							<li class="fragment roll-in">Integration testing</li>
+							<li class="fragment roll-in">UX testing</li>
+							<li class="fragment roll-in">Security testing</li>
+							<li class="fragment roll-in">Localization testing</li>
+							<li class="fragment roll-in">Accessibility testing</li>
+							<li class="fragment roll-in">Performance testing</li>
+							<li class="fragment roll-in">Device testing</li>
+						</ul>
+					</section>
+					
+					<section>
+						<h3>Mocha</h3>
+						<p class="file">Hilo.Specifications\specs\queries\imageQueryBuilder.spec.js</p>
+						<pre><code class="javascript">describe("Image Query Builder", function () {
+
+    var queryBuilder, storageFolder;
+
+    beforeEach(function (done) {
+        queryBuilder = new Hilo.ImageQueryBuilder();
+
+        var whenFolder = Windows.Storage.ApplicationData.current.localFolder.getFolderAsync("Indexed");
+        whenFolder.then(function (folder) {
+            storageFolder = folder;
+            done();
+        });
+    });</code></pre>	
+					</section>
+					
+					<section>
+						<h3>Async tests</h3>
+						<p class="file">Hilo.Specifications\specs\queries\imageQueryBuilder.spec.js</p>
+						<pre><code class="javascript">describe("when executing a query that specifies the number of images to load", function () {
+    var queryResult;
+
+    beforeEach(function () {
+        queryResult = queryBuilder
+            .count(1)
+            .build(storageFolder)
+            .execute();
+    });
+
+    it("should load the specified number of images", function (done) {
+        queryResult.then(function (images) {
+            expect(images.length).equals(1);
+            done();
+        }).done(null, done);
+    });
+});</code></pre>	
+					</section>
+					
+					<section>
+						<h3>Handling Exceptions </h3>
+						<p>Mocha test runner should intercepts this exception and reports it as a test failure.</p> 
+						<hr/>
+						<p>But WinJS is intercepting all promises errors.</p>
+						<hr/>
+						<p><span class="kw">.done</span> function is never called, test will go into a wait state and Mocha will time out (2 seconds), omitting the fail message.</p>
+					</section>
+					
+					<section>
+						<h3>Test App States</h3>
+						<img src="images/test-app-states.png" style="width: 80%" />
+						<small>Debug Location toolbar</small>
+					</section>
+					
+					<section>
+						<h3>Other Tests</h3>
+						<ul>
+							<li><a href="http://en.wikipedia.org/wiki/Pseudolocalization">Pseudo-localized</a> versions</li>
+							<li><a href="http://msdn.microsoft.com/en-us/library/ee823878(v=cs.20).aspx">STRIDE</a> methodology for threat modeling</li>
+							<li><a href="http://msdn.microsoft.com/en-us/library/windows/apps/jj553524.aspx">Performance Analyzer for HTML5 Apps</a>, Performance Monitor :)</li>
+							<li>Visual Studio <a href="http://msdn.microsoft.com/en-us/library/windows/apps/hh696637.aspx">profiler</a></li>
+							<li><a href="http://msdn.microsoft.com/en-us/library/windows/apps/hh694081.aspx">Windows App Certification Kit</a></li>
+						</ul>
+					</section>
+					
+				</section>
+				
+				
+				
+				
+
+				<section>
+					<h3>Details</h3><br/>
+					<p>source - <a href="http://bit.ly/win8js">http://bit.ly/win8js</a></p><br/>
+					<p>app docs - <a href="http://bit.ly/pphilojs">http://bit.ly/pphilojs</a></p><br/>
+					<p><a href="mailto:eu.zharkov@gmail.com">eu.zharkov@gmail.com</a></p>
+					<p><a href="http://twitter.com/2j2e">@2j2e</a></p>
+				</section>
+			</div>
+
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.min.js"></script>
+
+		<script>
+
+			// Full list of configuration options available here:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+				transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
+
+				// Optional libraries used to extend on reveal.js
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/showdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+					{ src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+					// { src: 'plugin/remotes/remotes.js', async: true, condition: function() { return !!document.body.classList; } }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>
