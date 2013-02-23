@@ -1,0 +1,76 @@
+﻿<html>
+<body>
+
+<p>This extension does not require the Roslyn Language Service and can be installed into Visual Studio 2012 without the Roslyn CTP.</p>
+
+<p>To install the extension:</p>
+
+<ol>
+    <li>Build the extension.</li>
+    <li>Browse to the "{CurrentUser}\Documents\Microsoft Roslyn CTP - September 2012\CSharp\ImplementNotifyPropertyChangedCS\bin\Debug"
+        folder on your hard drive.</li>
+    <li>Double-click on the <b>ImplementNotifyPropertyChangedCS.vsix</b> file that was built.</li>
+    <li>Restart Visual Studio.</li>
+</ol>
+
+<p>Once installed, you can select auto-implemented properties in a C# file, right-click in the editor and choose "Apply Notify Property Changed on properties"
+   from the context menu. For example, with extension installed, select the properties in the code below.</p>
+
+<pre>public class Employee
+{
+    public string Name { get; set; }
+    public decimal Salary { get; set; }
+}</pre>
+
+<p>Next, right-click on the selected properties and invoke "Apply Notify Property Changed on properties" from the context menu. The resulting code should look like so:</p>
+
+<pre>using System.Collections.Generic;
+using System.ComponentModel;
+
+public class Employee : INotifyPropertyChanged
+{
+    private string name;
+    private decimal salary;
+
+    public string Name
+    {
+        get
+        {
+            return name;
+        }
+        set
+        {
+            SetProperty(ref name, value, "Name");
+        }
+    }
+
+    public decimal Salary
+    {
+        get
+        {
+            return salary;
+        }
+        set
+        {
+            SetProperty(ref salary, value, "Salary");
+        }
+    }
+
+    private void SetProperty<T>(ref T field, T value, string name)
+    {
+        if (!EqualityComparer<T>.Default.Equals(field, value))
+        {
+            field = value;
+            var handler = PropertyChanged;
+            if (handler != null)
+            {
+                handler(this, new PropertyChangedEventArgs(name));
+            }
+        }
+    }
+
+    public event PropertyChangedEventHandler PropertyChanged;
+}</pre>
+
+</body>
+</html>

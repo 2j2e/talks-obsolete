@@ -1,0 +1,3 @@
+C:\Users\jeje\AppData\Local\Microsoft\VisualStudio\11.0Roslyn\Extensions\Roslyn Samples\Convert to Auto Property for C#\1.0\\ConvertToAutoPropertyCS.dll
+C:\Users\jeje\AppData\Local\Microsoft\VisualStudio\11.0Roslyn\Extensions\Roslyn Samples\Convert to Auto Property for C#\1.0\\ConvertToAutoPropertyCS.pdb
+C:\Users\jeje\AppData\Local\Microsoft\VisualStudio\11.0Roslyn\Extensions\Roslyn Samples\Convert to Auto Property for C#\1.0\\extension.vsixmanifest

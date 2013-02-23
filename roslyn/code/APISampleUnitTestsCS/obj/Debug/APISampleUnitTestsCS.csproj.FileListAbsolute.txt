@@ -1,0 +1,5 @@
+C:\Users\jeje\Documents\Microsoft Roslyn CTP - September 2012\CSharp\APISampleUnitTestsCS\bin\Debug\APISampleUnitTestsCS.dll
+C:\Users\jeje\Documents\Microsoft Roslyn CTP - September 2012\CSharp\APISampleUnitTestsCS\bin\Debug\APISampleUnitTestsCS.pdb
+C:\Users\jeje\Documents\Microsoft Roslyn CTP - September 2012\CSharp\APISampleUnitTestsCS\obj\Debug\APISampleUnitTestsCS.csprojResolveAssemblyReference.cache
+C:\Users\jeje\Documents\Microsoft Roslyn CTP - September 2012\CSharp\APISampleUnitTestsCS\obj\Debug\APISampleUnitTestsCS.dll
+C:\Users\jeje\Documents\Microsoft Roslyn CTP - September 2012\CSharp\APISampleUnitTestsCS\obj\Debug\APISampleUnitTestsCS.pdb

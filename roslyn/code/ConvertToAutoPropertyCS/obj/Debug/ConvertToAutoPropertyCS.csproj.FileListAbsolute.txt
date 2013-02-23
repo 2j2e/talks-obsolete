@@ -1,0 +1,8 @@
+C:\Users\jeje\Documents\Microsoft Roslyn CTP - September 2012\CSharp\ConvertToAutoPropertyCS\bin\Debug\ConvertToAutoPropertyCS.dll
+C:\Users\jeje\Documents\Microsoft Roslyn CTP - September 2012\CSharp\ConvertToAutoPropertyCS\bin\Debug\ConvertToAutoPropertyCS.pdb
+C:\Users\jeje\Documents\Microsoft Roslyn CTP - September 2012\CSharp\ConvertToAutoPropertyCS\bin\Debug\ConvertToAutoPropertyCS.vsix
+C:\Users\jeje\Documents\Microsoft Roslyn CTP - September 2012\CSharp\ConvertToAutoPropertyCS\bin\Debug\extension.vsixmanifest
+C:\Users\jeje\Documents\Microsoft Roslyn CTP - September 2012\CSharp\ConvertToAutoPropertyCS\obj\Debug\ConvertToAutoPropertyCS.csprojResolveAssemblyReference.cache
+C:\Users\jeje\Documents\Microsoft Roslyn CTP - September 2012\CSharp\ConvertToAutoPropertyCS\obj\Debug\ConvertToAutoPropertyCS.dll
+C:\Users\jeje\Documents\Microsoft Roslyn CTP - September 2012\CSharp\ConvertToAutoPropertyCS\obj\Debug\ConvertToAutoPropertyCS.pdb
+C:\Users\jeje\Documents\Microsoft Roslyn CTP - September 2012\CSharp\ConvertToAutoPropertyCS\obj\Debug\extension.vsixmanifest
