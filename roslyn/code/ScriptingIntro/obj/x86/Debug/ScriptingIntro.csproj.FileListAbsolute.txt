@@ -1,0 +1,10 @@
+C:\Users\jeje\Documents\Microsoft Roslyn CTP - September 2012\CSharp\ScriptingIntro\bin\Debug\ScriptingIntro.exe
+C:\Users\jeje\Documents\Microsoft Roslyn CTP - September 2012\CSharp\ScriptingIntro\bin\Debug\ScriptingIntro.pdb
+C:\Users\jeje\Documents\Microsoft Roslyn CTP - September 2012\CSharp\ScriptingIntro\obj\x86\Debug\ScriptingIntro.csprojResolveAssemblyReference.cache
+C:\Users\jeje\Documents\Microsoft Roslyn CTP - September 2012\CSharp\ScriptingIntro\obj\x86\Debug\MainWindow.baml
+C:\Users\jeje\Documents\Microsoft Roslyn CTP - September 2012\CSharp\ScriptingIntro\obj\x86\Debug\MainWindow.g.cs
+C:\Users\jeje\Documents\Microsoft Roslyn CTP - September 2012\CSharp\ScriptingIntro\obj\x86\Debug\App.g.cs
+C:\Users\jeje\Documents\Microsoft Roslyn CTP - September 2012\CSharp\ScriptingIntro\obj\x86\Debug\ScriptingIntro_MarkupCompile.cache
+C:\Users\jeje\Documents\Microsoft Roslyn CTP - September 2012\CSharp\ScriptingIntro\obj\x86\Debug\ScriptingIntro.g.resources
+C:\Users\jeje\Documents\Microsoft Roslyn CTP - September 2012\CSharp\ScriptingIntro\obj\x86\Debug\ScriptingIntro.exe
+C:\Users\jeje\Documents\Microsoft Roslyn CTP - September 2012\CSharp\ScriptingIntro\obj\x86\Debug\ScriptingIntro.pdb

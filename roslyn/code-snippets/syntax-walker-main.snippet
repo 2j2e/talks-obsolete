@@ -1,0 +1,53 @@
+<CodeSnippets
+    xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+    <CodeSnippet Format="1.0.0">
+        <Header>
+            <Title>
+                3 Syntax Walker - Main
+            </Title>
+        </Header>
+        <Snippet>
+            <Code Language="Csharp">
+                <![CDATA[ SyntaxTree tree = SyntaxTree.ParseText(
+@"using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using Roslyn.Compilers;
+using Roslyn.Compilers.CSharp;
+ 
+namespace TopLevel
+{
+    using Microsoft;
+    using System.ComponentModel;
+ 
+    namespace Child1
+    {
+        using Microsoft.Win32;
+        using System.Runtime.InteropServices;
+ 
+        class Foo { }
+    }
+ 
+    namespace Child2
+    {
+        using System.CodeDom;
+        using Microsoft.CSharp;
+ 
+        class Bar { }
+    }
+}");
+ 
+            var root = (CompilationUnitSyntax)tree.GetRoot();
+ 
+            var collector = new UsingCollector();
+            collector.Visit(root);
+ 
+            foreach (var directive in collector.Usings)
+            {
+                Console.WriteLine(directive.Name);
+            }]]>
+            </Code>
+        </Snippet>
+    </CodeSnippet>
+</CodeSnippets>

@@ -1,0 +1,47 @@
+<CodeSnippets
+    xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+    <CodeSnippet Format="1.0.0">
+        <Header>
+            <Title>
+                7 Workspaces
+            </Title>
+        </Header>
+        <Snippet>
+            <Code Language="Csharp">
+                <![CDATA[// The test solution is copied to the output directory when you build this sample.
+            var workspace = Workspace.LoadSolution(@"YOUR_SOLUTION");
+
+            // Take a snapshot of the original solution.
+            var originalSolution = workspace.CurrentSolution;
+
+            // Declare a variable to store the intermediate solution snapshot at each step.
+            ISolution newSolution = originalSolution;
+
+            foreach (var project in originalSolution.Projects)
+            {
+                // Note how we can't simply iterate over project.Documents because it will return
+                // IDocument objects from the originalSolution, not from the newSolution. We need to
+                // use the DocumentId (that doesn't change) to look up the corresponding snapshot of
+                // the document in the newSolution.
+                foreach (var documentId in project.DocumentIds)
+                {
+                    // Look up the snapshot for the original document in the latest forked solution.
+                    var document = newSolution.GetDocument(documentId);
+
+                    // Get the object that describes the changes (nothing is modified yet).
+                    var transformation = document.OrganizeImports();
+
+                    // Store the solution implicitly constructed in the previous step as the latest
+                    // one so we can continue building it up in the next iteration.
+                    newSolution = transformation.Project.Solution;
+                }
+            }
+
+            // Actually apply the accumulated changes and save them to disk. At this point
+            // workspace.CurrentSolution is updated to point to the new solution.
+            workspace.ApplyChanges(originalSolution, newSolution);
+]]>
+            </Code>
+        </Snippet>
+    </CodeSnippet>
+</CodeSnippets>

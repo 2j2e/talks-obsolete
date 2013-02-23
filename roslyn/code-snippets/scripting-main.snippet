@@ -1,0 +1,25 @@
+<CodeSnippets
+    xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+    <CodeSnippet Format="1.0.0">
+        <Header>
+            <Title>
+                Scripting - Engine
+            </Title>
+        </Header>
+        <Snippet>
+            <Code Language="Csharp">
+                <![CDATA[// Initialize CSharp ScriptEngine.
+            var engine = new ScriptEngine();
+
+            // Add references
+            engine.AddReference("System");
+            engine.AddReference("PresentationCore");
+            engine.AddReference(this.GetType().Assembly.Location);
+
+            // Create the host object model and seed the Session with it.
+            hostObj = new HostObjectModel(this);
+            var session = engine.CreateSession(hostObj);]]>
+            </Code>
+        </Snippet>
+    </CodeSnippet>
+</CodeSnippets>

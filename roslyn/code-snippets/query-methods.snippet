@@ -1,0 +1,24 @@
+<CodeSnippets
+    xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+    <CodeSnippet Format="1.0.0">
+        <Header>
+            <Title>
+                2 Query Methods
+            </Title>
+        </Header>
+        <Snippet>
+            <Code Language="Csharp">
+                <![CDATA[// Query methods
+            var firstParameters = from methodDeclaration in root.DescendantNodes()
+                                                    .OfType<MethodDeclarationSyntax>()
+                                  where methodDeclaration.Identifier.ValueText == "Main"
+                                  select methodDeclaration.ParameterList.Parameters.First();
+
+            var argsParameter2 = firstParameters.Single();
+
+            // Ctrl+Alt+I to open the Immediate window.
+            // Check argsParameter == argsParameter2 ]]>
+            </Code>
+        </Snippet>
+    </CodeSnippet>
+</CodeSnippets>

@@ -1,0 +1,44 @@
+<CodeSnippets
+    xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+    <CodeSnippet Format="1.0.0">
+        <Header>
+            <Title>
+                1 Traversig Trees
+            </Title>
+        </Header>
+        <Snippet>
+            <Code Language="Csharp">
+                <![CDATA[// Traversing Trees
+
+            SyntaxTree tree = SyntaxTree.ParseText(
+@"using System;
+using System.Collections;
+using System.Linq;
+using System.Text;
+ 
+namespace HelloWorld
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine(""Hello, World!"");
+        }
+    }
+}");
+
+            var root = (CompilationUnitSyntax)tree.GetRoot();
+
+            var firstMember = root.Members[0];
+
+            var helloWorldDeclaration = (NamespaceDeclarationSyntax)firstMember;
+
+            var programDeclaration = (TypeDeclarationSyntax)helloWorldDeclaration.Members[0];
+
+            var mainDeclaration = (MethodDeclarationSyntax)programDeclaration.Members[0];
+
+            var argsParameter = mainDeclaration.ParameterList.Parameters[0];]]>
+            </Code>
+        </Snippet>
+    </CodeSnippet>
+</CodeSnippets>

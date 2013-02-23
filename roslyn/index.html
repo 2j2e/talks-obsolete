@@ -176,8 +176,28 @@
 				</section>
 
 				<section>
-					<h2>Workspace</h2>
-					<img src="images/workspace.png" />
+					<section>
+						<h2>Workspaces</h2>
+						<img src="images/workspace.png" />
+					</section>
+
+					<section>
+						<h2>Example</h2>
+			<pre><code class="csharp">ProjectId pid1, pid2;
+DocumentId did1, did2;
+ISolution solution = 
+      Solution.Create(SolutionId.CreateNewId("Solution"))
+      .AddCSharpProject("Project1.dll", "Project1", out pid1)
+      .AddDocument(pid1, "A.cs", "public class A { }", out did1)
+      .AddCSharpProject("Project2.dll", "Project2", out pid2)
+      .AddDocument(pid2, "B.cs", "class B : A { }", out did2)
+      .AddProjectReference(pid2, pid1);</code></pre>
+					</section>
+
+					<section>
+						<h2>DEMO</h2>
+					</section>
+
 				</section>
 
 				<section>
