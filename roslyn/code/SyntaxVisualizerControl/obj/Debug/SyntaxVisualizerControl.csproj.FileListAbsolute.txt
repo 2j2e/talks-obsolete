@@ -1,0 +1,18 @@
+C:\Users\jeje\Documents\Microsoft Roslyn CTP - September 2012\Shared\SyntaxVisualizerControl\bin\Debug\Roslyn.Samples.SyntaxVisualizer.Control.dll
+C:\Users\jeje\Documents\Microsoft Roslyn CTP - September 2012\Shared\SyntaxVisualizerControl\bin\Debug\Roslyn.Samples.SyntaxVisualizer.Control.pdb
+C:\Users\jeje\Documents\Microsoft Roslyn CTP - September 2012\Shared\SyntaxVisualizerControl\obj\Debug\SyntaxVisualizerControl.csprojResolveAssemblyReference.cache
+C:\Users\jeje\Documents\Microsoft Roslyn CTP - September 2012\Shared\SyntaxVisualizerControl\obj\Debug\SyntaxVisualizerControl.baml
+C:\Users\jeje\Documents\Microsoft Roslyn CTP - September 2012\Shared\SyntaxVisualizerControl\obj\Debug\SyntaxVisualizerControl.g.cs
+C:\Users\jeje\Documents\Microsoft Roslyn CTP - September 2012\Shared\SyntaxVisualizerControl\obj\Debug\Roslyn.Samples.SyntaxVisualizer.Control_MarkupCompile.cache
+C:\Users\jeje\Documents\Microsoft Roslyn CTP - September 2012\Shared\SyntaxVisualizerControl\obj\Debug\Roslyn.Samples.SyntaxVisualizer.Control.g.resources
+C:\Users\jeje\Documents\Microsoft Roslyn CTP - September 2012\Shared\SyntaxVisualizerControl\obj\Debug\Roslyn.Samples.SyntaxVisualizer.Control.dll
+C:\Users\jeje\Documents\Microsoft Roslyn CTP - September 2012\Shared\SyntaxVisualizerControl\obj\Debug\Roslyn.Samples.SyntaxVisualizer.Control.pdb
+C:\dev\git\presentations\roslyn\code\SyntaxVisualizerControl\bin\Debug\Roslyn.Samples.SyntaxVisualizer.Control.dll
+C:\dev\git\presentations\roslyn\code\SyntaxVisualizerControl\bin\Debug\Roslyn.Samples.SyntaxVisualizer.Control.pdb
+C:\dev\git\presentations\roslyn\code\SyntaxVisualizerControl\obj\Debug\SyntaxVisualizerControl.csprojResolveAssemblyReference.cache
+C:\dev\git\presentations\roslyn\code\SyntaxVisualizerControl\obj\Debug\SyntaxVisualizerControl.baml
+C:\dev\git\presentations\roslyn\code\SyntaxVisualizerControl\obj\Debug\SyntaxVisualizerControl.g.cs
+C:\dev\git\presentations\roslyn\code\SyntaxVisualizerControl\obj\Debug\Roslyn.Samples.SyntaxVisualizer.Control_MarkupCompile.cache
+C:\dev\git\presentations\roslyn\code\SyntaxVisualizerControl\obj\Debug\Roslyn.Samples.SyntaxVisualizer.Control.g.resources
+C:\dev\git\presentations\roslyn\code\SyntaxVisualizerControl\obj\Debug\Roslyn.Samples.SyntaxVisualizer.Control.dll
+C:\dev\git\presentations\roslyn\code\SyntaxVisualizerControl\obj\Debug\Roslyn.Samples.SyntaxVisualizer.Control.pdb

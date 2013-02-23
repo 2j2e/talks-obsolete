@@ -1,0 +1,54 @@
+C:\Users\jeje\Documents\Microsoft Roslyn CTP - September 2012\Shared\SyntaxVisualizerExtension\bin\Debug\Roslyn.Samples.SyntaxVisualizer.Extension.dll
+C:\Users\jeje\Documents\Microsoft Roslyn CTP - September 2012\Shared\SyntaxVisualizerExtension\bin\Debug\Roslyn.Samples.SyntaxVisualizer.Extension.pdb
+C:\Users\jeje\Documents\Microsoft Roslyn CTP - September 2012\Shared\SyntaxVisualizerExtension\bin\Debug\Roslyn.Samples.SyntaxVisualizer.Extension.pkgdef
+C:\Users\jeje\Documents\Microsoft Roslyn CTP - September 2012\Shared\SyntaxVisualizerExtension\bin\Debug\Roslyn.Samples.SyntaxVisualizer.Extension.vsix
+C:\Users\jeje\Documents\Microsoft Roslyn CTP - September 2012\Shared\SyntaxVisualizerExtension\bin\Debug\extension.vsixmanifest
+C:\Users\jeje\Documents\Microsoft Roslyn CTP - September 2012\Shared\SyntaxVisualizerExtension\bin\Debug\Roslyn.Samples.SyntaxVisualizer.Control.dll
+C:\Users\jeje\Documents\Microsoft Roslyn CTP - September 2012\Shared\SyntaxVisualizerExtension\bin\Debug\Roslyn.Samples.SyntaxVisualizer.DgmlHelper.dll
+C:\Users\jeje\Documents\Microsoft Roslyn CTP - September 2012\Shared\SyntaxVisualizerExtension\bin\Debug\Roslyn.Samples.SyntaxVisualizer.Control.pdb
+C:\Users\jeje\Documents\Microsoft Roslyn CTP - September 2012\Shared\SyntaxVisualizerExtension\bin\Debug\Roslyn.Samples.SyntaxVisualizer.DgmlHelper.pdb
+C:\Users\jeje\Documents\Microsoft Roslyn CTP - September 2012\Shared\SyntaxVisualizerExtension\obj\Debug\SyntaxVisualizerExtension.csprojResolveAssemblyReference.cache
+C:\Users\jeje\Documents\Microsoft Roslyn CTP - September 2012\Shared\SyntaxVisualizerExtension\obj\Debug\SyntaxVisualizerContainer.baml
+C:\Users\jeje\Documents\Microsoft Roslyn CTP - September 2012\Shared\SyntaxVisualizerExtension\obj\Debug\SyntaxVisualizerContainer.g.cs
+C:\Users\jeje\Documents\Microsoft Roslyn CTP - September 2012\Shared\SyntaxVisualizerExtension\obj\Debug\Roslyn.Samples.SyntaxVisualizer.Extension_MarkupCompile.cache
+C:\Users\jeje\Documents\Microsoft Roslyn CTP - September 2012\Shared\SyntaxVisualizerExtension\obj\Debug\Roslyn.Samples.SyntaxVisualizer.Extension.g.resources
+C:\Users\jeje\Documents\Microsoft Roslyn CTP - September 2012\Shared\SyntaxVisualizerExtension\obj\Debug\VSPackage.resources
+C:\Users\jeje\Documents\Microsoft Roslyn CTP - September 2012\Shared\SyntaxVisualizerExtension\obj\Debug\Roslyn.Samples.SyntaxVisualizer.Extension.Resources.resources
+C:\Users\jeje\Documents\Microsoft Roslyn CTP - September 2012\Shared\SyntaxVisualizerExtension\obj\Debug\SyntaxVisualizerExtension.csproj.GenerateResource.Cache
+C:\Users\jeje\Documents\Microsoft Roslyn CTP - September 2012\Shared\SyntaxVisualizerExtension\obj\Debug\SyntaxVisualizerExtension.cto
+C:\Users\jeje\Documents\Microsoft Roslyn CTP - September 2012\Shared\SyntaxVisualizerExtension\obj\Debug\VSCT.read.1.tlog
+C:\Users\jeje\Documents\Microsoft Roslyn CTP - September 2012\Shared\SyntaxVisualizerExtension\obj\Debug\VSCT.write.1.tlog
+C:\Users\jeje\Documents\Microsoft Roslyn CTP - September 2012\Shared\SyntaxVisualizerExtension\obj\Debug\CtoResourceMerger.cache
+C:\Users\jeje\Documents\Microsoft Roslyn CTP - September 2012\Shared\SyntaxVisualizerExtension\obj\Debug\VSPackage.resources.original
+C:\Users\jeje\Documents\Microsoft Roslyn CTP - September 2012\Shared\SyntaxVisualizerExtension\obj\Debug\Roslyn.Samples.SyntaxVisualizer.Extension.dll
+C:\Users\jeje\Documents\Microsoft Roslyn CTP - September 2012\Shared\SyntaxVisualizerExtension\obj\Debug\Roslyn.Samples.SyntaxVisualizer.Extension.pdb
+C:\Users\jeje\Documents\Microsoft Roslyn CTP - September 2012\Shared\SyntaxVisualizerExtension\obj\Debug\Roslyn.Samples.SyntaxVisualizer.Extension.pkgdef
+C:\Users\jeje\Documents\Microsoft Roslyn CTP - September 2012\Shared\SyntaxVisualizerExtension\obj\Debug\Roslyn.Samples.SyntaxVisualizer.Extension.latest.pkgdef
+C:\Users\jeje\Documents\Microsoft Roslyn CTP - September 2012\Shared\SyntaxVisualizerExtension\obj\Debug\extension.vsixmanifest
+C:\dev\git\presentations\roslyn\code\SyntaxVisualizerExtension\bin\Debug\Roslyn.Samples.SyntaxVisualizer.Extension.dll
+C:\dev\git\presentations\roslyn\code\SyntaxVisualizerExtension\bin\Debug\Roslyn.Samples.SyntaxVisualizer.Extension.pdb
+C:\dev\git\presentations\roslyn\code\SyntaxVisualizerExtension\bin\Debug\Roslyn.Samples.SyntaxVisualizer.Extension.pkgdef
+C:\dev\git\presentations\roslyn\code\SyntaxVisualizerExtension\bin\Debug\Roslyn.Samples.SyntaxVisualizer.Extension.vsix
+C:\dev\git\presentations\roslyn\code\SyntaxVisualizerExtension\bin\Debug\extension.vsixmanifest
+C:\dev\git\presentations\roslyn\code\SyntaxVisualizerExtension\bin\Debug\Roslyn.Samples.SyntaxVisualizer.Control.dll
+C:\dev\git\presentations\roslyn\code\SyntaxVisualizerExtension\bin\Debug\Roslyn.Samples.SyntaxVisualizer.DgmlHelper.dll
+C:\dev\git\presentations\roslyn\code\SyntaxVisualizerExtension\bin\Debug\Roslyn.Samples.SyntaxVisualizer.Control.pdb
+C:\dev\git\presentations\roslyn\code\SyntaxVisualizerExtension\bin\Debug\Roslyn.Samples.SyntaxVisualizer.DgmlHelper.pdb
+C:\dev\git\presentations\roslyn\code\SyntaxVisualizerExtension\obj\Debug\SyntaxVisualizerExtension.csprojResolveAssemblyReference.cache
+C:\dev\git\presentations\roslyn\code\SyntaxVisualizerExtension\obj\Debug\SyntaxVisualizerContainer.baml
+C:\dev\git\presentations\roslyn\code\SyntaxVisualizerExtension\obj\Debug\SyntaxVisualizerContainer.g.cs
+C:\dev\git\presentations\roslyn\code\SyntaxVisualizerExtension\obj\Debug\Roslyn.Samples.SyntaxVisualizer.Extension_MarkupCompile.cache
+C:\dev\git\presentations\roslyn\code\SyntaxVisualizerExtension\obj\Debug\Roslyn.Samples.SyntaxVisualizer.Extension.g.resources
+C:\dev\git\presentations\roslyn\code\SyntaxVisualizerExtension\obj\Debug\VSPackage.resources
+C:\dev\git\presentations\roslyn\code\SyntaxVisualizerExtension\obj\Debug\Roslyn.Samples.SyntaxVisualizer.Extension.Resources.resources
+C:\dev\git\presentations\roslyn\code\SyntaxVisualizerExtension\obj\Debug\SyntaxVisualizerExtension.csproj.GenerateResource.Cache
+C:\dev\git\presentations\roslyn\code\SyntaxVisualizerExtension\obj\Debug\SyntaxVisualizerExtension.cto
+C:\dev\git\presentations\roslyn\code\SyntaxVisualizerExtension\obj\Debug\VSCT.read.1.tlog
+C:\dev\git\presentations\roslyn\code\SyntaxVisualizerExtension\obj\Debug\VSCT.write.1.tlog
+C:\dev\git\presentations\roslyn\code\SyntaxVisualizerExtension\obj\Debug\CtoResourceMerger.cache
+C:\dev\git\presentations\roslyn\code\SyntaxVisualizerExtension\obj\Debug\VSPackage.resources.original
+C:\dev\git\presentations\roslyn\code\SyntaxVisualizerExtension\obj\Debug\Roslyn.Samples.SyntaxVisualizer.Extension.dll
+C:\dev\git\presentations\roslyn\code\SyntaxVisualizerExtension\obj\Debug\Roslyn.Samples.SyntaxVisualizer.Extension.pdb
+C:\dev\git\presentations\roslyn\code\SyntaxVisualizerExtension\obj\Debug\Roslyn.Samples.SyntaxVisualizer.Extension.pkgdef
+C:\dev\git\presentations\roslyn\code\SyntaxVisualizerExtension\obj\Debug\Roslyn.Samples.SyntaxVisualizer.Extension.latest.pkgdef
+C:\dev\git\presentations\roslyn\code\SyntaxVisualizerExtension\obj\Debug\extension.vsixmanifest

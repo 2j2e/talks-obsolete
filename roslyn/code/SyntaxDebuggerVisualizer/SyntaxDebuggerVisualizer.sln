@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SyntaxDebuggerVisualizer", "SyntaxDebuggerVisualizer.csproj", "{EA097FB1-36CC-43A5-82A9-E8CAC955F248}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SyntaxVisualizerControl", "..\SyntaxVisualizerControl\SyntaxVisualizerControl.csproj", "{AFE45E23-E7EE-48C5-8143-EBE2FF67070F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{EA097FB1-36CC-43A5-82A9-E8CAC955F248}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EA097FB1-36CC-43A5-82A9-E8CAC955F248}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EA097FB1-36CC-43A5-82A9-E8CAC955F248}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EA097FB1-36CC-43A5-82A9-E8CAC955F248}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AFE45E23-E7EE-48C5-8143-EBE2FF67070F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AFE45E23-E7EE-48C5-8143-EBE2FF67070F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AFE45E23-E7EE-48C5-8143-EBE2FF67070F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AFE45E23-E7EE-48C5-8143-EBE2FF67070F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

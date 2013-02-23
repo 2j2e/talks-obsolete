@@ -1,0 +1,8 @@
+C:\Users\jeje\AppData\Local\Microsoft\VisualStudio\11.0Roslyn\Extensions\Roslyn Samples\Roslyn Syntax Visualizer Extension\1.0\\Roslyn.Samples.SyntaxVisualizer.Extension.dll
+C:\Users\jeje\AppData\Local\Microsoft\VisualStudio\11.0Roslyn\Extensions\Roslyn Samples\Roslyn Syntax Visualizer Extension\1.0\\Roslyn.Samples.SyntaxVisualizer.Extension.pdb
+C:\Users\jeje\AppData\Local\Microsoft\VisualStudio\11.0Roslyn\Extensions\Roslyn Samples\Roslyn Syntax Visualizer Extension\1.0\\Roslyn.Samples.SyntaxVisualizer.Control.dll
+C:\Users\jeje\AppData\Local\Microsoft\VisualStudio\11.0Roslyn\Extensions\Roslyn Samples\Roslyn Syntax Visualizer Extension\1.0\\Roslyn.Samples.SyntaxVisualizer.DgmlHelper.dll
+C:\Users\jeje\AppData\Local\Microsoft\VisualStudio\11.0Roslyn\Extensions\Roslyn Samples\Roslyn Syntax Visualizer Extension\1.0\\Roslyn.Samples.SyntaxVisualizer.Extension.pkgdef
+C:\Users\jeje\AppData\Local\Microsoft\VisualStudio\11.0Roslyn\Extensions\Roslyn Samples\Roslyn Syntax Visualizer Extension\1.0\\extension.vsixmanifest
+C:\Users\jeje\AppData\Local\Microsoft\VisualStudio\11.0Roslyn\Extensions\Roslyn Samples\Roslyn Syntax Visualizer Extension\1.0\\Roslyn.Samples.SyntaxVisualizer.Control.pdb
+C:\Users\jeje\AppData\Local\Microsoft\VisualStudio\11.0Roslyn\Extensions\Roslyn Samples\Roslyn Syntax Visualizer Extension\1.0\\Roslyn.Samples.SyntaxVisualizer.DgmlHelper.pdb

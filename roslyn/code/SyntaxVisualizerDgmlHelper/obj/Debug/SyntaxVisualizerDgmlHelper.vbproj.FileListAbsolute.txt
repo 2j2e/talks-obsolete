@@ -1,0 +1,4 @@
+C:\Users\jeje\Documents\Microsoft Roslyn CTP - September 2012\Shared\SyntaxVisualizerDgmlHelper\bin\Debug\Roslyn.Samples.SyntaxVisualizer.DgmlHelper.dll
+C:\Users\jeje\Documents\Microsoft Roslyn CTP - September 2012\Shared\SyntaxVisualizerDgmlHelper\bin\Debug\Roslyn.Samples.SyntaxVisualizer.DgmlHelper.pdb
+C:\Users\jeje\Documents\Microsoft Roslyn CTP - September 2012\Shared\SyntaxVisualizerDgmlHelper\obj\Debug\Roslyn.Samples.SyntaxVisualizer.DgmlHelper.dll
+C:\Users\jeje\Documents\Microsoft Roslyn CTP - September 2012\Shared\SyntaxVisualizerDgmlHelper\obj\Debug\Roslyn.Samples.SyntaxVisualizer.DgmlHelper.pdb

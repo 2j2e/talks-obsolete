@@ -1,0 +1,70 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <ApplicationIcon>SyntaxTree.ico</ApplicationIcon>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{EA097FB1-36CC-43A5-82A9-E8CAC955F248}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Roslyn.Samples.SyntaxVisualizer.Debugger</RootNamespace>
+    <AssemblyName>Roslyn.Samples.SyntaxVisualizer.Debugger</AssemblyName>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\Debug</OutputPath>
+    <DocumentationFile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\Release</OutputPath>
+    <DocumentationFile />
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.VisualStudio.DebuggerVisualizers" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="System" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="WindowsBase" />
+    <Reference Include="WindowsFormsIntegration" />
+    <Reference Include="Roslyn.Compilers" />
+    <Reference Include="Roslyn.Compilers.CSharp" />
+    <Reference Include="Roslyn.Compilers.VisualBasic" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Readme.html" />
+    <Content Include="SyntaxTree.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Attributes.cs" />
+    <Compile Include="SyntaxDebuggerVisualizer.cs" />
+    <Compile Include="SyntaxDebuggerVisualizerForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SyntaxDebuggerVisualizerForm.Designer.cs">
+      <DependentUpon>SyntaxDebuggerVisualizerForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SyntaxSerializer.cs" />
+    <Compile Include="SyntaxTransporter.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="SyntaxDebuggerVisualizerForm.resx">
+      <DependentUpon>SyntaxDebuggerVisualizerForm.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\SyntaxVisualizerControl\SyntaxVisualizerControl.csproj">
+      <Project>{AFE45E23-E7EE-48C5-8143-EBE2FF67070F}</Project>
+      <Name>SyntaxVisualizerControl</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
