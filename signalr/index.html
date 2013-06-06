@@ -1,0 +1,292 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+	<title>SignalR: Add real-time to your applications</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=792, user-scalable=no">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<link rel="stylesheet" href="shower/themes/ribbon/styles/screen.css">
+	<!--
+		To apply styles to the certain slides
+		set slide ID to get needed elements
+		-->
+	<style>
+		#Cover h2 {
+			margin:30px 0 0;
+			color:#FFF;
+			text-align:center;
+			font-size:70px;
+			}
+            #Cover p {
+                margin:10px 0 0;
+                text-align:center;
+                color:#FFF;
+                font-style:italic;
+                font-size:20px;
+                }
+			#Cover p a {
+				color:#FFF;
+				}
+			#Cover .title {
+				background-color: rgba(0, 0, 0, 0.8);	
+			}
+			#Cover .logo {
+				width: 30%;
+				margin-left: 68%;
+				margin-top: 45%;
+				display:block;
+			}
+        #Why img {
+            height: 76%;
+            float: left;
+        }
+            #Why a {
+                display: block;
+                margin-top: 8em;
+                margin-left: 18em;
+            }
+		#Picture h2 {
+			color:#FFF;
+			}
+		#SeeMore h2 {
+			font-size:100px
+			}
+            #SeeMore img {
+                width:0.72em;
+                height:0.72em;
+                }
+        #WebSockets div, #Transports div, #ServerSentEvents div {
+            background-color: rgba(255, 255, 255, 0.95);
+        }
+        #ForeverFrames ul {
+              margin-bottom: 0;
+        }
+	</style>
+</head>
+<body class="list">
+	<header class="caption">
+		<h1>SignalR: Add real-time to your applications</h1>
+		<p>by Eugene Zharkov</p>
+	</header>
+	<section class="slide cover" id="Cover"><div>
+		<div class="title">
+			<h2>SignalR: Add real-time to your applications</h2>
+			<p>by <a href="http://2j2e.github.io">Eugene Zharkov</a></p>
+		</div>
+		<img src="pictures/cover.jpg" />
+		<img class="logo" src="pictures/hotcode-logo.png" />
+		<!-- photo by http://www.flickr.com/photos/ericejohnson/2686036413/ -->
+	</div></section>
+
+    <section class="slide" id="Why"><div>
+        <h2>Why to use SignalR?</h2>
+        <img src="pictures/why.png" />
+        <a href="https://github.com/SignalR/SignalR">https://github.com/SignalR/SignalR</a>
+    </div></section>
+
+    <section class="slide cover" id="Transports"><div>
+        <h2>Transports</h2>
+        <ul>
+            <li>WebSockets (the only true full-duplex)</li>
+            <li>Server Sent Events</li>
+            <li>Forever Frame</li>
+            <li>Long polling</li>
+        </ul>
+        <img src="pictures/transport.jpg" />
+    </div></section>
+
+    <section class="slide cover" id="WebSockets"><div>
+        <h2>WebSockets</h2>
+        <ul>
+            <li>html5 feature</li>
+            <li>works on top of TCP protocol</li>
+            <li>full-duplex</li>
+            <li>low latency, low overhead</li>
+            <li>you need >IE10 and IIS8</li>
+            <li>not all browsers / servers/ proxies support it</li>
+        </ul>
+        <img src="pictures/web-sockets.jpg">
+    </div></section>
+
+    <section class="slide cover" id="ServerSentEvents"><div>
+        <h2>Server Sent Events</h2>
+        <ul>
+            <li>requires a single connection between client-server</li>
+            <li>uses JS API EventSource through which client can request a particular URL to receive data stream</li>
+            <li>no need to reconnect</li>
+            <li>works in server-2-client direction only</li>
+        </ul>
+        <img src="pictures/server-sent-events.jpg">
+    </div></section>
+
+    <section class="slide" id="ForeverFrames"><div>
+        <h2>Forever Frames</h2>
+        <ul>
+            <li>only for IE</li>
+            <li>hidden iframes are in the load loop with chunks of data </li>
+        </ul>
+        <img src="pictures/forever-frames.png" />
+    </div></section>
+
+    <section class="slide"><div>
+        <h2>Long Polling</h2>
+        <ul>
+            <li>high overhead on requests/response (headers etc.)</li>
+            <li>medium latency</li>
+        </ul>
+        <img src="pictures/long-pulling.png">
+    </div></section>
+
+    <section class="slide"><div>
+        <h2>Transports</h2>
+        <img src="pictures/transports.png" />
+        </div></section>
+
+	<section class="slide"><div>
+		<h2>Clients</h2>
+		<ul>
+			<li>iOS (<a href="https://github.com/DyKnow/SignalR-ObjC">SignalR-ObjC</a>)</li>
+			<li>Android (<a href="https://github.com/erizet/SignalA">SignalA</a>)</li>
+            <li>Windows RT / Phone</li>
+			<li><a href="https://github.com/SignalR/SignalR/wiki/SignalR-JS-Client">jQuery</a>, <a href="http://srtsolutions.github.io/backbone.signalr/">Backbone</a></li>
+			<li>Mono</li>
+            <li>QT (<a href="https://github.com/p3root/signalr-qt">SignalR-QT</a>)</li>
+		</ul>
+	    </div></section>
+
+    <section class="slide"><div>
+        <h2>Requirements</h2>
+        <ul>
+            <li>Windows Server 2008 R2/2012, Windows 7/8</li>
+            <li>IIS 8. IIS 7 and 7.5. Support for <a href="http://support.microsoft.com/kb/980368">extensionless URLs</a> is required.</li>
+            <li>&gt;= .NET 3.5, WinRT, Silverlight</li>
+        </ul>
+        </div></section>
+
+    <section class="slide"><div>
+        <h2>Does NOT support IE 6/7</h2>
+        <img src="pictures/no-old-ie-support.gif" />
+        </div></section>
+
+    <section class="slide"><div>
+        <h2>Persistent Connection</h2>
+        <ul>
+            <li>the raw connection</li>
+            <li>IHTTP handler (OnConnection, OnDisconnection, OnReconnection)</li>
+            <li>custom logic must be implemented</li>
+        </ul>
+        </div></section>
+
+    <section class="slide"><div>
+        <h2>Hub</h2>
+        <ul>
+            <li>high-level API on top of Persistent Connection</li>
+            <li>route automatically mapped</li>
+            <li>clients can be divided by groups</li>
+        </ul>
+    </div></section>
+
+    <section class="slide"><div>
+        <h2>Add to project</h2>
+        <img src="pictures/install-console.png" />
+        </div></section>
+
+    <section class="slide"><div>
+        <img src="pictures/install-nuget.png" />
+    </div></section>
+
+    <section class="slide"><div>
+        <h2>New References and Scripts</h2>
+        <img src="pictures/new-references.png" />
+    </div></section>
+
+    <section class="slide"><div>
+        <h2>Hub registration : C#</h2>
+        <pre>
+            <code>public class MvcApplication : System.Web.HttpApplication</code>
+            <code>{</code>
+            <code>    protected void Application_Start()</code>
+            <code>    {</code>
+            <code>        <mark class="important">RouteTable.Routes.MapHubs();</mark></code>
+            <code>         AreaRegistration.RegisterAllAreas();</code>
+            <code>         WebApiConfig.Register(GlobalConfiguration.Configuration);</code>
+            <code>         FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);</code>
+        </pre>
+        </div></section>
+
+    <section class="slide"><div>
+        <h2>Hub object | C#</h2>
+        <pre>
+            <code>public class Documents : Hub </code>
+            <code>{</code>
+            <code>    public void Send(string documentName)</code>
+            <code>    {</code>
+            <code>         <mark class="important">Clients.All.addMessage(documentName);</mark></code>
+            <code>    }</code>
+            <code>}</code>
+        </pre>
+    </div></section>
+
+    <section class="slide"><div>
+        <h2>Subscribe to Hub messages | JS</h2>
+        <pre>
+            <code>var documentHub = $.connection.documents;</code>
+            <code>documentHub.client.addMessage = function (documentName) {</code>
+            <code>   $("#documents").append("&lt;li&gt;" + documentName + "&lt;/li&gt;");</code>
+            <code>};</code>
+        </pre>
+    </div></section>
+
+    <section class="slide"><div>
+        <h2>Hub object | C#</h2>
+        <pre>
+            <code>$.connection.hub.logging = true;</code>
+            <code>$.connection.hub.start().done(function () {</code>
+            <code>    $("#addDocument").click(function () {</code>
+            <code>        documentHub.server.send($("#document").val());</code>
+            <code>    });</code>
+            <code>});</code>
+        </pre>
+    </div></section>
+
+    <section class="slide"><div>
+        <h2>Work with Hub | WinRT</h2>
+        <pre>
+            <code>var connection = new HubConnection("http://localhost:59576");</code>
+            <code>var hub = connection.CreateHubProxy("documents");</code>
+            <code>hub.On("addMessage", message => </code>
+            <code>    Dispatcher.RunAsync(CoreDispatcherPriority.Normal,() =></code>
+            <code>    {</code>
+            <code>        DocumentsCounter.Text = (++_newDocuments).ToString();</code>
+            <code>    }));</code>
+        </pre>
+    </div></section>
+
+    <section class="slide"><div>
+        <h2>Work with Hub | Android (SignalA)</h2>
+        <pre>
+            <code>HubConnection con = new HubConnection("http://localhost:59576",
+                this, new LongPollingTransport())</code>
+            <code>IHubProxy hub = con.CreateHubProxy("documents");</code>
+            <code>hub.On("addMessage", new HubOnDataCallback() {</code>
+            <code>    @Override</code>
+            <code>    public void OnReceived(.. args) {</code>
+            <code>    {    //...     }});</code>
+            <code>con.Start();</code>
+        </pre>
+    </div></section>
+
+    <section class="slide"><div>
+        <h2>That's all folks</h2>
+        <ul>
+            <li>@2j2e</li>
+            <li>eu.zharkov@gmail.com</li>
+            <li><a href="http://bit.ly/signalr0">http://bit.ly/signalr0</a></li>
+        </ul>
+    </div></section>
+
+
+	<div class="progress"><div></div></div>
+	<script src="shower/shower.min.js"></script>
+</body>
+</html>
