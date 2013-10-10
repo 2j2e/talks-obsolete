@@ -4,7 +4,7 @@
     <list default="true" id="e09d7805-065a-4735-8c96-4b72174a7ebd" name="Default" comment="" />
     <ignored path="katana.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/index.html" changelist="e09d7805-065a-4735-8c96-4b72174a7ebd" time="1370527895270" ignored="false" />
+    <file path="/index.html" changelist="e09d7805-065a-4735-8c96-4b72174a7ebd" time="1370546233132" ignored="false" />
     <file path="/dummy.xml" changelist="e09d7805-065a-4735-8c96-4b72174a7ebd" time="1370250943507" ignored="false" />
     <file path="/custom.css" changelist="e09d7805-065a-4735-8c96-4b72174a7ebd" time="1370522873411" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -29,7 +29,7 @@
       <file leaf-file-name="index.html" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="18" column="51" selection-start="688" selection-end="688" vertical-scroll-proportion="0.45333335">
+            <state line="29" column="14" selection-start="995" selection-end="995" vertical-scroll-proportion="0.12592593">
               <folding />
             </state>
           </provider>
@@ -91,7 +91,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -112,6 +111,7 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -139,13 +139,13 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1" y="1" width="1536" height="898" extended-state="1" />
-    <editor active="true" />
+    <frame x="1" y="1" width="1536" height="898" extended-state="0" />
+    <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.249833" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.18370074" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.249833" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.18370074" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3292683" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -223,6 +223,13 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
+        <state line="25" column="23" selection-start="879" selection-end="879" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding />
         </state>
@@ -263,16 +270,16 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/custom.css">
+    <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="28" column="34" selection-start="422" selection-end="422" vertical-scroll-proportion="0.0">
+        <state line="29" column="14" selection-start="995" selection-end="995" vertical-scroll-proportion="0.12592593">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
+    <entry file="file://$PROJECT_DIR$/custom.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="51" selection-start="688" selection-end="688" vertical-scroll-proportion="0.45333335">
+        <state line="28" column="34" selection-start="422" selection-end="422" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
