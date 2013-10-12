@@ -1,0 +1,211 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>Roslyn Compiler as a Service</title>
+
+		<meta name="description" content="The Roslyn project changes that model by opening up the Visual Basic and C# compilers as APIs.  These APIs allow tools and end-users to share in the wealth of information the compilers have about code. ">
+		<meta name="author" content="Eugene Zharkov">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<link rel="stylesheet" href="css/reveal.min.css">
+		<link rel="stylesheet" href="css/theme/beige.css" id="theme">
+
+		<!-- For syntax highlighting -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- If the query includes 'print-pdf', use the PDF print sheet -->
+		<script>
+			document.write( '<link rel="stylesheet" href="css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+
+		<style type="text/css">
+		.reveal h2 {
+			line-height: 1.5em;
+		}
+		</style>
+	</head>
+
+	<body>
+
+		<div class="reveal">
+			<div class="slides">
+
+				<section>
+					<h2>Как правильно выбирать компоненты при разработке</h2>
+					<p>
+						<small> <a href="http://twitter.com/2j2e">Евгений Жарков / @2j2e</a> </small>
+					</p>
+				</section>
+
+				<section>
+					<h2>Нерешительность во всяком деле еще более пагубна, нежели дурной выбор</h2>
+				</section>
+
+				<section>
+					<h2>Всем кажется лучшим то, от чего отказались</h2>
+				</section>
+
+				<section>
+					<h2>Правильного варианта не существует</h2>
+				</section>
+
+				<section>
+					<h2>Источники решений</h2>
+					<p>
+						<ul>
+							<li>официальный блог</li>
+							<li>блоги разработчиков</li>
+							<li>StackOverflow</li>
+							<li>кто-то на проекте/в компании</li>
+							<li>друг</li>
+						</ul>					
+					</p>
+				</section>
+
+				<section>
+					<h2>Откуда ждать помощи?</h2>
+					<p>Давайте расставим приоритеты</p>
+				</section>
+
+				<section>
+					<h2>Статистика скорости ответов на SO</h2>
+					<ul>
+						<li>Средняя - 3.71 дня</li>
+						<li>Медиана - 21 минут</li>
+						<li>Максимум - 2 года</li>
+					</ul>
+				</section>
+
+				<section>
+					<h2>Откуда я узнал эти числа?</h2>
+					<p><a href="http://data.stackexchange.com/">http://data.stackexchange.com</a></p>
+					<ul>
+						<li><a href="http://data.stackexchange.com/stackoverflow/query/fork/9452">Longest response time</a></li>
+						<li><a href="http://data.stackexchange.com/stackoverflow/query/71842/shortest-time-when-an-accepted-answer-is-posted">Shortest response time</a></li>
+						<li><a href="http://data.stackexchange.com/stackoverflow/query/32737/average-response-time-by-tags">Average response time</a></li>
+					</ul>
+				</section>
+
+				<section>
+					<h2>Откуда я узнал эти числа?</h2>
+					<p><img src="./images/so-data-sql.png" width="150%" /></p>
+				</section>
+
+				<section>
+					<h2>По какой дороге вы бы не пошли, в любом случае вы столкнетесь с непредвиденными проблемами</h2>
+				</section>
+
+				<section>
+					<h2>Анализ</h2>
+					<p>Обязательный анализ компонентов, сравнения, нарисовать табличку</p>
+				</section>
+
+				<section>
+					<h2>Прокрастинация</h2>
+				</section>
+
+				<section>
+						<h2>Интересы бизнеса</h2>
+						<p>Нельзя все взять и переписать</p>
+				</section>				
+
+				<section>
+					<h2>Синдром хорошего парня - вы не угодите всем членам команды</h2>
+				</section>
+
+				<section>
+					<h2>Цель</h2>
+					<p>Принимая решение важно уметь определять «первичность» цели - это нужно сделать за 3 дня, неделю, в чем основная цель: производительность, гибкость, масштабируемость?</p>
+				</section>			
+
+				<section>
+					<h2>Мотиваторы при выборе</h2>
+					<ul>
+						<li>конструктивные</li>
+						<li>не конструктивные</li>
+					</ul>
+				</section>
+
+				<section>
+					<h2>Неконструктивные</h2>
+					<ul>
+						<li>защита себя</li>
+						<li>протест</li>
+						<li>желание быть лучше других</li>
+						<li>желание угодить кому-то</li>
+					</ul>
+				</section>
+
+				<section>
+					<h2>Конструктивные</h2>
+					<ul>
+						<li>защита себя</li>
+						<li>протест</li>
+						<li>желание быть лучше других</li>
+						<li>желание угодить кому-то</li>
+					</ul>
+				</section>
+
+				<section>
+					<h2>Максимализм и конформизм</h2>
+					<img src="./images/inv1.jpg" witdh="150" />
+					<p>Исследования Принстонского университета</p>
+				</section>
+
+				<section>
+					<p>Максималистам в магазине требуется больше времени для того, чтобы сделать окончательный выбор, чем их оппонентам</p>
+				</section>
+
+				<section>
+					<p>Если конформисты находят предмет, отвечающий их запросам, они приобретают его и прекращают дальнейшие поиски.</p>
+				</section>
+
+
+			</div>
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.min.js"></script>
+
+		<script>
+
+			// Full list of configuration options available here:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+				width: 960,
+				height: 700,
+
+				theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+				transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
+
+				// Optional libraries used to extend on reveal.js
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/showdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+					{ src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+					// { src: 'plugin/remotes/remotes.js', async: true, condition: function() { return !!document.body.classList; } }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>
