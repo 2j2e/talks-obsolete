@@ -1,0 +1,578 @@
+
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+	<title>Building SPA with Knockout</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=792, user-scalable=no">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<link rel="stylesheet" href="shower/themes/ribbon/styles/screen.css">
+</head>
+<body class="list">
+	<header class="caption">
+		<h1>Building SPA with Knockout</h1>
+		<p>Eugene Zharkov</p>
+	</header>
+	<section class="slide cover" id="Cover"><div>
+		<div style="background: rgba(0, 0, 0, 0.8); float:right">
+			<h2>Building SPA</br>with Knockout</h2>
+			<p>Magic by <a href="http://twitter.com/2j2e">Eugene Zharkov</a></p>
+		</div>
+		<img src="images/topic.jpg" alt="">
+		<style>
+			#Cover h2 {
+				margin:30px 10px;
+				color:#FFF;
+				text-align:right;
+				font-size:70px;
+				}
+			#Cover p {
+				margin:10px;
+				text-align:right;
+				color:#FFF;
+				font-style:italic;
+				font-size:15px;
+				}
+				#Cover p a {
+					color:#FFF;
+				}
+
+		</style>
+	</div></section>
+	<section class="slide"><div>
+		<h2>What you should solve:</h2>
+		<ol>
+			<li class="next">Server-side API</li>
+			<li class="next">Tests</li>
+			<li class="next">Cache</li>
+			<li class="next">Localization</li>
+			<li class="next">Navigation</li>
+			<li class="next">Modules</li>
+			<li class="next">Deployment</li>
+			<li class="next">Debug</li>
+			<li class="next">...</li>
+		</ol>
+	</div></section>
+	<section class="slide"><div>
+		<h2>What you should solve:</h2>
+		<p>10...11...12...13...14...15....<h3>It should just work!</h3></p>
+	</div>
+	<img src="images/keep-calm-it-works-on-my-machine.png" align="right" style="margin-top: 15%;">
+	</section>
+	<section class="slide"><div>
+		<img src="images/mvvm-layer.jpg" />
+	</div></section>
+	<section class="slide shout"><div>
+		<h2>Does Knockout solves application issues by itself?</h2>
+	</div></section>
+	<section class="slide shout"><div>
+		<h2><span style="color: #33FF00">Yes</span> <span style="color: #FF3333">No</span> <span style="color: #9900CC">Maybe</span></h2>
+	</div></section>
+
+	<section class="slide"><div>
+		<h2>Navigation</h2>
+		<ol>
+			<li class="next"><a href="http://sammyjs.org/intro">Sammy</a></li>
+			<li class="next"><a href="http://millermedeiros.github.io/crossroads.js/">Crossroads</a></li>
+			<li class="next">
+			<pre style="font-family: 'Courier New',Courier,mono; white-space: pre;font-size: 10px; font-style: normal; line-height: 11px;">                                           $"   *.      
+               d$$$$$$$P"                  $    J
+                   ^$.                     4r  "
+                   d"b                    .db
+                  P   $                  e" $
+         ..ec.. ."     *.              zP   $.zec..
+     .^        3*b.     *.           .P" .@"4F      "4
+   ."         d"  ^b.    *c        .$"  d"   $         %
+  /          P      $.    "c      d"   @     3r         3
+ 4        .eE........$r===e$$$$eeP    J       *..        b
+ $       $$$$$       $   4$$$$$$$     F       d$$$.      4
+ $       $$$$$       $   4$$$$$$$     L       *$$$"      4
+ 4         "      ""3P ===$$$$$$"     3                  P
+  *                 $       """        b                J
+   ".             .P                    %.             @
+     %.         z*"                      ^%.        .r"
+        "*==*""                             ^"*==*""   Gilo94'</pre></li>
+		</ol>		
+	</div></section>
+
+	<section class="slide"><div>
+		<h2>Navigation</h2>
+		<pre>
+			<code>(window.onhashchange = onInnerNavigate)();</code>
+			<code>function onInnerNavigate() {
+	var url = location.hash.replace(/^#?!/, '').slice(1) 
+		|| (viewModel.isLoggedIn()) || 'index';
+	viewModel.page.path(beautifyUrlArgs(url.split('/'))); }</code>
+			<code>function beautifyUrlArgs(args) {
+	return args.map(function (item) {
+		return decodeURI(item.replace(/\+/g, '%20')
+			.replace(/\-/g, '_')); 	});}</code>
+		</pre>
+	</div></section>
+
+	<section class="slide"><div>
+		<h2>Separation / Modularity</h2>
+		<ol>
+			<li><a href="http://requirejs.org/">Require</a></li>
+			<li><a href="http://yepnopejs.com/">YepNope</a></li>
+			<li><a href="https://github.com/headjs/headjs">headjs</a></li>
+			<li>Bicycle</li>
+		</ol>
+	</div></section>
+
+	<section class="slide"><div>
+		<h2>The obvious choise</h2>
+		<p>I do it my way</p>
+		<img src="images/i-do-it-my-way.jpg" />			
+	</div></section>
+
+	<section class="slide"><div>
+		<h2>Modularity</h2>
+		<span>----- menu.js file ---</span>
+		<pre>
+			<code>exports.isOpen = ko.observable(false);</code>
+			<code>exports.blur = function () {</code>
+			<code>    exports.isOpen(false);</code>
+			<code>    return true;</code>
+			<code>};</code>
+			<code>exports.toggle = function () {</code>
+			<code>    exports.isOpen(!exports.isOpen());</code>
+			<code>};</code>
+		</pre>
+		</div></section>	
+
+		<section class="slide"><div>
+			<h2>Modularity</h2>
+			The View Model should have:
+			<ol>
+				<li>onInit</li>
+				<li>onShow</li>
+				<li>logic to clear state</li>
+			</ol>
+		</div></section>
+
+		<section class="slide"><div>
+		<h2>View State</h2>
+		<pre style="font-size: 18px;">
+			<code>ko.extenders.protector = function (frontend, element) {</code>
+			<code>  if (!('protector' in frontend)) {</code>
+			<code>    var backend = frontend.protector = ko.utils.extend(ko.observable(), {</code>
+			<code>		hasLocalChanges: ko.observable(false),</code>
+			<code>		accept: function () { ...... },</code>
+			<code>		revert: function () { ...... }</code>
+		</pre>
+		</div></section>
+
+		<section class="slide"><div>
+		<h2>View State</h2>
+		<pre style="font-size: 18px;">
+			<code>accept: function () {</code>
+			<code>	if (!backend.hasLocalChanges()) return;</code>
+			<code>	backend(frontend());</code>
+			<code>	backend.hasLocalChanges(false);</code>
+			<code>}</code>
+		</pre>
+		</div></section>
+
+		<section class="slide"><div>
+		<h2>View State</h2>
+		<pre style="font-size: 18px;">
+			<code>revert: function () {</code>
+			<code>	if (!backend.hasLocalChanges()) return;</code>
+			<code>	frontend(backend());</code>
+			<code>	backend.hasLocalChanges(false);</code>
+			<code>}</code>
+		</pre>
+		</div></section>
+
+		<section class="slide"><div>
+		<h2>View State</h2>
+		<pre style="font-size: 18px;">
+			<code>ko.computed(function () {</code>
+			<code>	if (!backend.hasLocalChanges()) backend(frontend());</code>
+			<code>});</code>
+
+			<code>frontend.subscribe(function () {</code>
+			<code>	backend.hasLocalChanges(true);</code>
+			<code>});</code>
+
+			<code>var viewModel = ko.dataFor(element.form);</code>
+			<code>(viewModel.protectors || (viewModel.protectors = [])).push(backend);</code>
+		</pre>
+		</div></section>
+
+		<section class="slide"><div>
+			<h2>Validation</h2>
+			<ol>
+				<li>We choose Knockout Validation</li>
+				<li>Added additional validation rules</li>
+				<li>Enforced some rules, like email</li>
+				<li>Changed the basic logic</li>
+			</ol>
+		</div></section>
+
+		<section class="slide"><div>
+		<h2>Validation</h2>
+		<pre style="font-size: 18px;">
+			<code>validation.rules['tel'] = {</code>
+			<code> validator: function (val, validate) {</code>
+			<code>	if (!validate) { return true; }</code>
+			<code>	if (utils.isEmptyVal(val)) { return true; }</code>
+			<code>	var normalized = val.replace(/[\(\)\-\s]/g, "");</code>
+			<code>	return utils.isEmptyVal(val)
+					|| (validate && /^\+?\d{10,16}$/i.test(normalized)); },</code>
+			<code>message: 'Please enter a proper phone number'</code>
+		</pre>
+		</div></section>
+
+		<section class="slide"><div>
+		<h2>Validation</h2>
+		<pre style="font-size: 18px;">
+			<code>&lt;label&gt;</code>
+			<code>  &lt;span class="header" data-bind="caption: 'settings.password'"&gt;&lt;/span&gt;</code>
+			<code>  &lt;input data-bind="value: password, error: 'signingUpFirst.errorPassword', 
+			attr: {type: isPasswordShown() ? 'text' : 'password'}" 
+			pattern=".{4,20}" required /&gt;</code>
+			<code>&lt;/label&gt;</code>
+		</pre>
+		</div></section>
+
+		<section class="slide"><div>
+		<h2>Localization</h2>
+		<ul>
+			<li>All data on the site loads by separated call with requested language</li>
+			<li>Data is being put into the cache</li>
+			<li>User will always see cached data, but we have a background check of any changes</li>
+			<li>Knockout custom bindings helps us to be laconic in the templates
+		</ul>
+		</div></section>
+
+		<section class="slide" id="validation2"><div>
+		<h2>Localization</h2>
+		<pre>
+			<code>&lt;label&gt;</code>
+			<code>	&lt;div class="header" data-bind="caption: 'someView.organizationName'&gt;&gt;/div&gt;</code>
+			<code>	&lt;input type="text" data-bind="value: organization, 
+									error: 'someView.errorOrganizationName'" required&gt;</code>
+			<code>&lt;/label&gt;</code>
+		</pre></div>
+		<style type="text/css">
+			#validation2 pre code
+			{
+				font-size: 16px;
+				line-height: 30px;
+			}
+		</style></section>
+
+		<section class="slide shout"><div>
+			<h2>How To Debug Anywhere?</h2>
+		</div></section>
+
+		<section class="slide"><div>
+			<h2>JSConsole</h2>
+			<pre>
+				<code>(function () {</code>
+    		<code>var match = location.search.match(/[?&]debug=([^&]+)/);</code>
+    		<code>if (!match) return;</code>
+    		<code>	var key = decodeURIComponent(match[1]);</code>
+    		<code>	document.write('\x3Cscript type="text/javascript" 
+src="http://jsconsole.com/remote.js?' + key + '">\x3C/script>');</code>
+				<code>})();</code>
+			</pre>
+		</div></section>
+
+		<section class="slide"><div>
+			<h2>Weinre (WEb INspector REmote)</h2>
+			<pre style="font-size: 18px;">
+				<code>(function () {</code>
+    		<code>	var match = location.search.match(/[?&]weinre(=[^&]+)?/);</code>
+    		<code>	var id = location.search.match(/[?&]weinreid=([^&]+)?/);</code>
+    		<code>	if (!match && !id) return;</code>
+    		<code>	var host = decodeURIComponent(match ? match[1] || '' : '');</code>
+				<code>	host = host != '' ? host : 'SOME_IP_ADDRESS'</code>
+				<code>	id   = id ? '#' + id[1] : '';</code>
+    		<code>	document.write('\x3Cscript type="text/javascript" src="http://' + host 
+    		+ '//target/target-script-min.js' + id + '">\x3C/script>');
+})();</code>
+			</pre>
+		</div></section>
+
+		<section class="slide"><div>
+			<h2>Cache</h2>
+			<ol>
+				<li>Cache as more as possible on the server side</li>
+				<li>Use local storage</li>
+			</ol>
+		</div></section>
+
+		<section class="slide shout"><div>
+			<h2>Why?</h2>
+		</div></section>
+
+		<section class="slide"><div>
+			<h2>2 secs of waiting</h2>
+		</div>
+		<img src="images/2sec-wait.png" />
+		</section>
+
+		<section class="slide"><div>
+			<h2>4 secs of waiting</h2>
+		</div>
+		<img src="images/4sec-wait.png" />
+		</section>
+
+		<section class="slide"><div>
+			<h2>6 secs of waiting</h2>
+		</div>
+		<img src="images/6sec-wait.png" />
+		</section>
+
+		<section class="slide"><div>
+			<h2>8 secs of waiting</h2>
+		</div>
+		<img src="images/8sec-wait.png" />
+		</section>
+
+		<section class="slide"><div>
+			<h2>10 secs of waiting</h2>
+		</div>
+		<img src="images/10sec-wait.png" />
+		</section>
+
+		<section class="slide"><div></div>
+		<img src="images/too-much.png" />
+		</section>
+
+		<section class="slide"><div>
+			<h2>Cache</h2>
+			Create wrapper for api calls that cached your data or just save it directly
+			<img src="images/local-storage.png" />
+			<pre style="font-size: 18px;">
+				<code>// save data
+util.cachedObservable('location/country/list', util.apiUpdater, exports.countries);</code>
+				<code>// Cache observable declaration
+util.cachedObservable = function (id, updater, callback) {</code>
+			</pre>
+		</div></section>
+
+		<section class="slide"><div>
+			<h2>How to find you in the google?</h2>
+			<ul>
+				<li>You are totally ajaxed</li>
+				<li>The search engine will read your page as text</li>
+				<li>Try to disable JS in the browser</li>
+				<li>Now you understand blind people when you're describing how the platypus looks like</li>
+			</ul>
+		</div>
+		</section>
+
+		<section class="slide"><div>
+			<h2>Meet platypus</h2>
+			<img src="images/platypus.jpg" />
+		</div>
+		</section>
+
+		<section class="slide shout"><div>
+			<h2>PhantomJS or SlimerJS</h2>
+		</div>
+		</section>
+
+		<section class="slide"><div>
+			<h2>Google Crawler Workflow</h2>
+			<ol>
+				<li>Detects that you url contain '#!': http://pony.com/<span style="color: red;">#!</span>/services/payment</li>
+				<li>Replaces such links with _escaped_fragment_: http://pony.com/<span style="color: red;">_escaped_fragment_=</span>/services/payment</li>
+			</ol>
+		</div></section>
+
+		<section class="slide"><div>
+			<h2>how to prepare your site</h2>
+			<ol>
+				<li>Create a URL rewrite rule to redirect _escaped_fragment_ requests to the proper point</li>
+				<li>Call window-less browser and take an html snapshot of the requested page</li>
+			</ol>
+		</div></section>
+
+		<section class="slide"><div>
+			<h2>Action to take a snapshot</h2>
+			<ul>
+				<li>When your page is ready set some attribute to body like:
+					<pre><code>&lt;body data-ready="true"&gt;</code></pre></li>
+				<li>Make sure that all page calls were requested</li>
+			</ul>
+		</div>
+		</section>
+
+		<section class="slide"><div>
+			<h2>PhantomJS calls count</h2>
+			<pre>
+				<code>page.onResourceRequested = function (req) {</code>
+        <code>	requestedCount++;</code>
+        <code>};</code>
+    		<code>page.onResourceReceived = function (res) {</code>
+        <code>	if (res.stage == 'end') {</code>
+        <code>		receivedCount++;</code>
+        <code>		processAjaxRequests();</code>
+        <code> } };</code>
+      </pre>
+		</div>
+		</section>
+
+		<section class="slide"><div>
+			<h2>PhantomJS calls count</h2>
+			<pre>
+				<code>page.open(address, function (status) {</code>
+        <code>	if (status !== 'success') {</code>
+        <code>	    console.log('FAIL to load the address');</code>
+        <code> 	   phantom.exit(2);</code>
+        <code>	}</code>
+        <code>	pageLoaded = true;</code>
+    		<code>});</code>
+    	</pre>
+		</div>
+		</section>
+
+		<section class="slide"><div>
+			<h2>PhantomJS calls count</h2>
+			<pre>
+				<code>function processAjaxRequests () {</code>
+    		<code>	if (!pageLoaded || receivedCount != requestedCount)</code>
+    		<code>		return;</code>
+    		<code>	setTimeout(function () {</code>
+    	  <code>		console.log(page.content);</code>
+				<code>		phantom.exit(0); // hack for exit inside onResourceReceived</code>
+				<code>	}, 1500);</code>
+    		<code>}</code>
+    	</pre>
+		</div>
+		</section>
+
+		<section class="slide"><div>
+			<h2>PhantomJS server side call</h2>
+			<pre style="font-size: 18px;">
+				<code>using (var process = new Process()) {</code>
+	      <code>      process.StartInfo = new ProcessStartInfo {</code>
+			  <code>          FileName = dir + "\\phantomjs.exe",</code>
+			  <code>          Arguments = string.Format("'{0}\\crawler.js' '{1}' --load-images=false", dir, url),</code>
+			  <code>          UseShellExecute = false,</code>
+			  <code>          CreateNoWindow = true,</code>
+			  <code>          RedirectStandardOutput = true,</code>
+			  <code>          RedirectStandardError = true,</code>
+		    <code>        };</code>
+		    <code>};</code>
+    	</pre>
+		</div>
+		</section>
+
+		<section class="slide"><div>
+			<h2>Build and Deploy</h2>
+			<ol>
+				<li>Make a developer's life easier if you can skip building process during any changes</li>
+				<li>Create scripts that will automate your deployment process.</li>
+			</ol>
+		</div>
+		</section>
+
+		<section class="slide"><div>
+			<h2>Dependencies</h2>
+			<pre>
+				<code>"libs": {</code>
+				<code>	"dev": [ "less-1.3.3.min" ], </code>
+				<code>	"prod": [ "weinre", "util" ], </code>
+				<code>	"scripts": [ "knockout-2.3.0", "ko.protector" ] } </code>
+				<code>"include": {</code>
+				<code>	"scripts": [ "ko.util", "config" ]  }</code>
+				<code>"scripts": [ "language",</code>
+				<code>	{"name": "forgot_password", "for": ["mobile"] }</code>
+			</pre>
+		</div></section>
+
+		<section class="slide"><div>
+			<h2>Dependencies</h2>
+			<pre>
+				<code>"libs": {</code>
+				<code>	"dev": [ "less-1.3.3.min" ], </code>
+				<code>	"prod": [ "weinre", "util" ], </code>
+				<code>	"scripts": [ "knockout-2.3.0", "ko.protector" ] } </code>
+				<code>"include": {</code>
+				<code>	"scripts": [ "ko.util", "config" ]  }</code>
+				<code>"scripts": [ "language",</code>
+				<code>	{"name": "forgot_password", "for": ["mobile"] }</code>
+			</pre>
+		</div></section>
+
+		<section class="slide"><div>
+			<p>On the local machines we are using dynamic scripts loading by listening to window.onerror</p>
+			<p>During deployment we are packing all our js files, uglifying it and adding source maps. Same rule for templates - all to the one file.</p>
+		</div>
+		</section>
+
+		<section class="slide"><div>
+			<h2>Deployment with PowerShell and Node.js</h2>
+			<pre>
+				<code>Function Compile-JS($mode) {</code>
+			  <code>	@("uglify-js", "async") |% { NPM-Install $_ | Out-Null }</code>
+			  <code>	pushd $tempPath\$mode\js</code>
+			  <code>	node $siteDir\build\uglify $mode</code>
+			  <code>	if (!$?) { throw "Could not compile JS for $mode."  }</code>
+			  <code>	del dev.js -verbose</code>
+			  <code>	del scripts.json -verbose</code>
+			  <code>	popd</code>
+				<code>}</code>
+			</pre>
+		</div>
+		</section>
+
+		<section class="slide" id="deployment2"><div>
+			<h2>Deployment with PowerShell and Node.js</h2>
+			<pre>
+				<code>Function Compile-Templates($mode) {</code>
+  			<code>	pushd $tempPath\$mode</code>
+  			<code>	$lines = @()</code>
+  			<code>	$inDevBlock = $false</code>
+  			<code>	(Get-Content -Encoding UTF8 index.html) |% {</code>
+    		<code>	switch ($_.Trim()) {</code>
+      	<code>		'&lt;!-- #BUILT_TEMPLATES --&gt;' {</code>
+        <code>			ls templates\*.html |% {</code>
+        <code>			$lines += '&lt;script id="' + $_.BaseName + '" type="text/html"&gt;'</code>
+        <code> 			$lines += Get-Content -Encoding UTF8 $_</code>
+        <code>  			$lines += '&lt;/script&gt;'</code>
+			</pre>
+		</div>
+		<style type="text/css">
+			#deployment2 pre code
+			{
+				font-size: 16px;
+				line-height: 30px;
+			}
+		</style>
+		</section>
+
+		<section class="slide shout"><div>
+			<h2>Test everyting you can</h2>
+		</div>
+		</section>
+
+		<section class="slide"><div>
+			<h2>Separate a core so you'll be able to share your code through the mobile, desktop, etc. applications.</h2>
+		</div>
+		</section>
+
+		<section class="slide"><div>
+			<h3>Questions</h3>
+			<img src="images/questions.png" />
+		</div>
+		</section>
+
+		<section class="slide"><div>
+			<h2>Thanx</h2>
+			<p>Eugene Zharkov</p>
+			<p><a href="http://twitter.com/2j2e">@2j2e</a></p>
+			<p><a href="mailto:eu.zharkov@gmail.com">eu.zharkov@gmail.com</a></p>
+		</div>
+		</section>
+	
+	<div class="progress"><div></div></div>
+	<script src="shower/shower.min.js"></script>
+</body>
+</html>
