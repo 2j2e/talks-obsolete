@@ -17,15 +17,15 @@ module.exports = function (config) {
 
     // list of files / patterns to load in the browser
     files: [
-      '../angular-mc/bower_components/angular/angular.js',
-      '../angular-mc/bower_components/lodash/dist/lodash.js',
-      '../angular-mc/bower_components/angular-ui-router/release/angular-ui-router.js',
-      '../angular-mc/bower_components/restangular/dist/restangular.js',
-      '../angular-mc/bower_components/angular-mocks/angular-mocks.js',
-      '../angular-mc/bower_components/ngstorage/ngStorage.js',
-      '../angular-mc/app/**/*.js',
-      '../angular-mc/app/**/*.html',
-      '../angular-mc/tests/**/*.js'
+      '../example/bower_components/angular/angular.js',
+      '../example/bower_components/lodash/dist/lodash.js',
+      '../example/bower_components/angular-ui-router/release/angular-ui-router.js',
+      '../example/bower_components/restangular/dist/restangular.js',
+      '../example/bower_components/angular-mocks/angular-mocks.js',
+      '../example/bower_components/ngstorage/ngStorage.js',
+      '../example/app/**/*.js',
+      '../example/app/**/*.html',
+      '../example/tests/**/*.js'
     ],
 
 

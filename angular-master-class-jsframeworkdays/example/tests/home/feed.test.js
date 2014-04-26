@@ -30,7 +30,6 @@ describe("Feed", function () {
 
   it('feed.list: should return list', function () {
     feedService.list().then(function (data) {
-      console.log(data[0]);
       expect(data[0].id).toBe(1);
     })
     $httpBackend.flush();
