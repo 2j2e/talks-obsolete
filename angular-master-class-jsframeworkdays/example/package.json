@@ -1,0 +1,27 @@
+{
+  "name": "angular",
+  "version": "0.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "EZ",
+  "license": "BSD-2-Clause",
+  "dependencies": {
+    "gulp": "~3.6.2",
+    "gulp-concat": "~2.2.0",
+    "gulp-clean": "~0.2.4",
+    "gulp-changed": "~0.3.0",
+    "gulp-util": "~2.2.14",
+    "gulp-connect": "~2.0.5",
+    "gulp-typescript": "~0.2.0",
+    "gulp-karma": "0.0.4",
+    "karma": "~0.10",
+    "karma-jasmine": "~0.1.0",
+    "karma-cli": "~0.0.4",
+    "karma-chrome-launcher": "~0.1.2",
+    "karma-htmlfile-reporter": "~0.1",
+    "karma-ng-html2js-preprocessor": "~0.1"
+  }
+}

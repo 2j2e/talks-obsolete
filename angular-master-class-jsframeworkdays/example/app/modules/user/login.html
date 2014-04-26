@@ -1,0 +1,17 @@
+<span ng-show="authError">You have an error</span>
+<form class="pure-form pure-form-aligned" ng-submit="auth()">
+  <fieldset>
+    <div class="pure-control-group">
+      <label for="name">Username</label>
+      <input type="text" ng-model="login" id="name"/>
+    </div>
+
+    <div class="pure-control-group">
+      <label for="password">Password</label>
+      <input type="password" ng-model="password" id="password"/>
+    </div>
+    <div class="pure-controls">
+      <input class="pure-button pure-button-primary" type="submit" value="Sign in"/>
+    </div>
+  </fieldset>
+</form>
